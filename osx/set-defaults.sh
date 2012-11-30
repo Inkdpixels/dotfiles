@@ -418,17 +418,6 @@ defaults write com.google.Chrome.canary ExtensionInstallSources -array "https://
 
 
 ###############################################################################
-# SizeUp.app                                                                  #
-###############################################################################
-
-# Start SizeUp at login
-defaults write com.irradiatedsoftware.SizeUp StartAtLogin -bool true
-
-# Don’t show the preferences window on next start
-defaults write com.irradiatedsoftware.SizeUp ShowPrefsOnNextStart -bool false
-
-
-###############################################################################
 # Twitter.app                                                                 #
 ###############################################################################
 
