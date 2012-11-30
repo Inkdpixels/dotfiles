@@ -1,0 +1,18 @@
+{
+	"auto_upgrade_last_run": null,
+	"installed_packages":
+	[
+		"Dayle Rees Color Schemes",
+		"Emmet",
+		"Jade",
+		"JavaScript Snippets",
+		"Package Control",
+		"Sass",
+		"SFTP",
+		"SVN"
+	],
+	"repositories":
+	[
+		"https://github.com/sergeche/emmet-sublime"
+	]
+}
