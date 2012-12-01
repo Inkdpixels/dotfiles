@@ -8,22 +8,22 @@ A lightweight and customized dotfile repo wich is currently not intended to be u
 * The modified Terminal Pro-theme from [@mathiasbynens](https://github.com/mathiasbynens)
 * Symlinked Sublime 2 Settings
 
-### Install
-Install [git](http://git-scm.com/download/mac) before you move on to these steps
+### Download & Install
+Install [git](http://git-scm.com/download/mac) before you move on to these steps.
 ```bash
 # Fetches the latest dotfile repo and places it into your home folder /.dotfiles
 git clone https://github.com/Inkdpixels/dotfiles.git ~/.dotfiles
 
 cd ~/.dotfiles
 
-# Move all dotfiles to the system positions.
+# Move all dotfiles to the system positions & set all osx defaults.
 script/bootstrap.sh
+```
 
-# Set osx defaults
-osx/set-defaults.sh
-
+### Install Additions
+```bash
 # Copy & Symlink Sublime Text 2 User preferences
-sublime2/setup.sh
+sublime2/./setup
 ```
 
 
