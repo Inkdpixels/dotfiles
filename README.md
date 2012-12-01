@@ -5,7 +5,7 @@ A lightweight and customized dotfile repo wich is currently not intended to be u
 
 ### Whats inside
 * OS X's defaults
-* The modified Terminal Pro-theme from @mathiasbynens
+* The modified Terminal Pro-theme from [@mathiasbynens](https://github.com/mathiasbynens)
 * Symlinked Sublime 2 Settings
 
 ### Install
@@ -23,7 +23,7 @@ script/bootstrap
 ## Credits
 This repo is based on the work of others, as a result I wont claim this as my work. Currently its just a mess of files and is not intended to be a fully working dotfile repo. Most of the work was done by...
 
-* @mathiasbynens – [His dotfile repo](https://github.com/mathiasbynens/dotfiles)
-* @holman – [His dotfile repo](https://github.com/holman/dotfiles)
+* [@mathiasbynens](https://github.com/mathiasbynens) – [His dotfile repo](https://github.com/mathiasbynens/dotfiles)
+* [@holman](https://github.com/holman) – [His dotfile repo](https://github.com/holman/dotfiles)
 
 ...And probably more.
