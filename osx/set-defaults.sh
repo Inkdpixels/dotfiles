@@ -1,3 +1,5 @@
+#!/bin/sh
+#
 # Set the shit out of OS X's defaults
 # ./.set-defaults.sh
 #
