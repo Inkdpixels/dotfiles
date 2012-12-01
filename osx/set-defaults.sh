@@ -419,8 +419,7 @@ defaults write com.twitter.twitter-mac HideInBackground -bool true
 ###############################################################################
 
 for app in "Address Book" "Calendar" "Contacts" "Dashboard" "Dock" "Finder" \
-  "Mail" "Safari" "SizeUp" "SystemUIServer" "Terminal" "Transmission" \
-  "Twitter" "iCal" "iTunes"; do
+  "Safari" "SystemUIServer" "Terminal" "Twitter" "iCal" "iTunes"; do
   killall "$app" > /dev/null 2>&1
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
