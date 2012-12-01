@@ -1,6 +1,9 @@
 # Add `~/bin` to the `$PATH`
 export PATH=$PATH:~/bin
 
+# Setting the editor to Sublime Text 2
+export EDITOR="subl -w"
+
 # Load the shell dotfiles
 for file in ~/.{bash_prompt,aliases}; do
 	[ -r "$file" ] && source "$file"
