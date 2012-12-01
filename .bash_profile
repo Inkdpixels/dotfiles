@@ -1,3 +1,6 @@
+# Add `~/bin` to the `$PATH`
+export PATH=$PATH:~/bin
+
 # Load the shell dotfiles
 for file in ~/.{bash_prompt,aliases}; do
 	[ -r "$file" ] && source "$file"
