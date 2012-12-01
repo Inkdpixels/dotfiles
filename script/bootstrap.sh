@@ -1,9 +1,13 @@
 #!/bin/sh
 #
-# Copy the dotfiles to the system positions.
+# Set things up
 # ./bootstrap.sh
 #
 
-for file in ~/.dotfiles/.{aliases,bash_profile,bash_prompt,bashrc}; do
+# Set up the shortcut to this dotfiles folder
+export DOTFILES=$HOME/.dotfiles
+
+# Copy the dotfiles to the system positions.
+for file in $DOTFILES/.{aliases,bash_profile,bash_prompt,bashrc}; do
 	cp -R "$file" $HOME
 done
