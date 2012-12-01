@@ -1,7 +1,7 @@
 #!/bin/sh
 #
 # Set the shit out of OS X's defaults
-# ./.set-defaults.sh
+# ./set-defaults.sh
 #
 # Most of this stuff (including the Terminal theme in /init)
 # comes from @mathiasbynens
