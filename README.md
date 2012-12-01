@@ -9,7 +9,7 @@ A lightweight and customized dotfile repo wich is currently not intended to be u
 * Symlinked Sublime 2 Settings
 
 ### Install
-Install [git](http://git-scm.com/download/mac) before yyou move on to these steps
+Install [git](http://git-scm.com/download/mac) before you move on to these steps
 ```bash
 # Fetches the latest dotfile repo and places it into your home folder /.dotfiles
 git clone https://github.com/Inkdpixels/dotfiles.git ~/.dotfiles
