@@ -3,7 +3,7 @@
 # Set the shit out of OS X's defaults
 # ./set-defaults.sh
 #
-# Most of this stuff (including the Terminal theme in /init)
+# Most of this stuff (including the Terminal theme)
 # comes from @mathiasbynens
 # https://github.com/mathiasbynens/dotfiles/blob/master/.osx
 #
