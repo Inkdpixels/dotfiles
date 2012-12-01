@@ -14,9 +14,16 @@ Install [git](http://git-scm.com/download/mac) before yyou move on to these step
 # Fetches the latest dotfile repo and places it into your home folder /.dotfiles
 git clone https://github.com/Inkdpixels/dotfiles.git ~/.dotfiles
 
-# Install
 cd ~/.dotfiles
-script/bootstrap
+
+# Move all dotfiles to the system positions.
+script/bootstrap.sh
+
+# Set osx defaults
+osx/set-defaults.sh
+
+# Copy & Symlink Sublime Text 2 User preferences
+sublime2/setup.sh
 ```
 
 
