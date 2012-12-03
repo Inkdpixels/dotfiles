@@ -40,6 +40,9 @@ mirrorfiles() {
 
 
 
+# Ask for the administrator password upfront
+sudo -v
+
 ###############################################################################
 # Check for any required software                                             #
 ###############################################################################
