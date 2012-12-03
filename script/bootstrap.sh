@@ -16,7 +16,7 @@ export DOTFILES=$HOME/.dotfiles
 ###############################################################################
 # Copy the dotfiles to the system positions                                   #
 ###############################################################################
-for file in $DOTFILES/{.aliases,.bash_profile,.bash_prompt,.bashrc,.exports,git/.gitconfig,git/.gitignore,git/.gitattributes}; do
+for file in $DOTFILES/{bash/.aliases,bash/.bash_profile,bash/.bash_prompt,bash/.bashrc,bash/.exports,git/.gitconfig,git/.gitignore,git/.gitattributes}; do
 	cp -R "$file" $HOME
 done
 
