@@ -2,27 +2,27 @@
 
 # Header logging
 e_header() {
-    echo -e "\n$(tput bold ; tput setaf 6)$@$(tput sgr0)";
+    echo "\n$(tput bold ; tput setaf 6)$@$(tput sgr0)";
 }
 
 # Success logging
 e_success() {
-    echo -e "$(tput setaf 64)✓ $@$(tput sgr0)";
+    echo "$(tput setaf 64)✓ $@$(tput sgr0)";
 }
 
 # Error logging
 e_error() {
-    echo -e "$(tput setaf 1)x $@$(tput sgr0)";
+    echo "$(tput setaf 1)x $@$(tput sgr0)";
 }
 
 # Warning logging
 e_warning() {
-    echo -e "$(tput setaf 136)! $@$(tput sgr0)";
+    echo "$(tput setaf 136)! $@$(tput sgr0)";
 }
 
 # Move on message
 e_moveon() {
-    echo -e "$(tput setaf 6)$@$(tput sgr0)";
+    echo "$(tput setaf 6)$@$(tput sgr0)";
 }
 
 
