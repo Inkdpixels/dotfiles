@@ -8,8 +8,10 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
-# Sublime 2 Shortcut
+# Programm Shortcuts
 alias sl="subl"
+alias chrome="open -a google\ chrome"
+alias f='open -a Finder'
 
 # File size
 alias fs="stat -f \"%z bytes\""
