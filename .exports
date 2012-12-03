@@ -8,3 +8,6 @@ export HISTCONTROL=ignoredups
 
 # Make some commands not show up in history
 export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+
+# Disabling copying the extended attribute files (._*) in archives
+export COPYFILE_DISABLE=true
