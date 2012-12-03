@@ -29,6 +29,7 @@ mirrorfiles() {
     link "bash/.bash_prompt"   ".bash_prompt"
     link "bash/.bashrc"        ".bashrc"
     link "bash/.exports"       ".exports"
+    link "bash/.functions"     ".functions"
 
     link "git/.gitattributes"  ".gitattributes"
     link "git/.gitconfig"      ".gitconfig"
