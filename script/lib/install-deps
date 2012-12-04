@@ -40,10 +40,14 @@ install_deps() {
         e_success "git is installed."
     fi
 
-    # Fetch the latest version of 'z'
-    e_header "Fetching the latest version of 'z'..."
-    mkdir -p ~/code/z
-    curl https://raw.github.com/rupa/z/master/z.sh > ~/code/z/z.sh
-    chmod +x ~/code/z/z.sh
+    # Check for 'z'
+    if [ -d "~/code/z/z.sh" ] ; then
+        e_header "  Fetching the latest version of 'z'..."
+        mkdir -p ~/code/z
+        curl https://raw.github.com/rupa/z/master/z.sh > ~/code/z/z.sh
+        chmod +x ~/code/z/z.sh
+    else
+        e_success "'z' is installed."
+    fi
     echo
 }
