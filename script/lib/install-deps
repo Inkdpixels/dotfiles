@@ -14,6 +14,12 @@ install_deps() {
     if ! type_exists 'brew'; then
         e_header "Installing Homebrew..."
         ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+        if ! type_exists 'brew'; then
+            e_success "Homebrew is installed."
+        else
+            e_error "Something went wrong."
+            exit 1
+        fi
     else
         e_success "Homebrew is installed."
     fi
@@ -24,6 +30,12 @@ install_deps() {
         brew update
         e_header "Installing Git..."
         brew install git
+        if ! type_exists 'git'; then
+            e_success "Git is installed."
+        else
+            e_error "Something went wrong."
+            exit 1
+        fi
     else
         e_success "git is installed."
     fi
