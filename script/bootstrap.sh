@@ -120,19 +120,24 @@ e_header "
 if ! type_exists 'compass'; then
     e_warning "Compass is not installed"
     read -p "Install it? (y/n) " -n 1
+
     if [[ $REPLY =~ ^[Yy]$ ]] ; then
+        # Check if SASS is installed as its a dependency of Compass
         if ! type_exists 'sass'; then
             e_header "Installing SASS..."
             sudo gem install sass
+            # Test if compass was installed successfully
             if ! type_exists 'sass'; then
                 exit 1
             fi
         fi
         e_header "Installing Compass..."
         sudo gem install compass
+        # Test if compass was installed successfully
         if ! type_exists 'compass'; then
             e_success "Compass has been successfully installed."
         fi
+    # If the user input was nN
     else
         e_moveon "Moving on to the next step..."
     fi
@@ -140,7 +145,8 @@ else
     e_success "Compass is installed."
 fi
 
-read -p "Update all installed Ruby gem's? (y/n) " -n 1
+# Update all installed Ruby gems
+read -p "Update all installed Ruby gems? (y/n) " -n 1
 if [[ $REPLY =~ ^[Yy]$ ]] ; then
     gem update
 fi
