@@ -14,6 +14,7 @@ export DOTFILES=$HOME/.dotfiles
 
 # Getting the helper functions
 source ./script/lib/utils
+source ./script/lib/install-deps
 
 # Symlink function
 mirrorfiles() {
@@ -49,31 +50,7 @@ sudo -v
 ###############################################################################
 # Before relying on Homebrew, check that packages can be compiled
 echo "  Doing some checks to see if all required software packages are installed"
-if ! type_exists 'gcc'; then
-    e_error "The XCode Command Line Tools must be installed first."
-    echo "  https://developer.apple.com/downloads"
-    exit 1
-else
-    e_success "The XCode Command Line Tools are installed."
-fi
-
-# Check for Homebrew
-if ! type_exists 'brew'; then
-    e_header "Installing Homebrew..."
-    ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
-else
-    e_success "Homebrew is installed."
-fi
-
-# Check for git
-if ! type_exists 'git'; then
-    e_header "Updating Homebrew..."
-    brew update
-    e_header "Installing Git..."
-    brew install git
-else
-    e_success "git is installed."
-fi
+install_deps
 
 
 
