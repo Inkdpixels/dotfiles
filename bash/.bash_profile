@@ -3,6 +3,9 @@
 # Add `~/bin` to the `$PATH`
 export PATH=$PATH:~/bin
 
+# Load 'z' into the shell
+. ~/code/z/z.sh
+
 # Load the shell dotfiles
 for file in ~/.{bash_prompt,aliases,exports,functions}; do
 	[ -r "$file" ] && source "$file"
