@@ -140,6 +140,11 @@ else
     e_success "Compass is installed."
 fi
 
+read -p "Update all installed Ruby gem's? (y/n) " -n 1
+if [[ $REPLY =~ ^[Yy]$ ]] ; then
+    gem update
+fi
+
 
 
 ###############################################################################
