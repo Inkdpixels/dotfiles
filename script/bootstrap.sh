@@ -32,6 +32,7 @@ mirrorfiles() {
     link "bash/.exports"       ".exports"
     link "bash/.functions"     ".functions"
 
+    # Git Configuration files
     link "git/.gitattributes"  ".gitattributes"
     link "git/.gitconfig"      ".gitconfig"
     link "git/.gitignore"      ".gitignore"
@@ -121,28 +122,20 @@ e_header "
 ===============================================================================
 = RUBY GEMS                                                                   =
 ==============================================================================="
-# Check if SASS is installed
-if ! type_exists 'sass'; then
-    e_warning "SASS is not installed"
-    read -p "Install it? (y/n) " -n 1
-    if [[ $REPLY =~ ^[Yy]$ ]] ; then
-        sudo gem install sass
-        if ! type_exists 'sass'; then
-            e_success "SASS has been successfully installed."
-        fi
-    else
-        e_moveon "Moving on to the next step..."
-    fi
-else
-    e_success "SASS is installed."
-fi
-
 # Check if Compass is installed
 if ! type_exists 'compass'; then
     e_warning "Compass is not installed"
     read -p "Install it? (y/n) " -n 1
     if [[ $REPLY =~ ^[Yy]$ ]] ; then
-        sudo gem install sass
+        if ! type_exists 'sass'; then
+            e_header "Installing SASS..."
+            sudo gem install sass
+            if ! type_exists 'sass'; then
+                exit 1
+            fi
+        fi
+        e_header "Installing Compass..."
+        sudo gem install compass
         if ! type_exists 'compass'; then
             e_success "Compass has been successfully installed."
         fi
@@ -152,7 +145,6 @@ if ! type_exists 'compass'; then
 else
     e_success "Compass is installed."
 fi
-
 
 
 
