@@ -1,6 +1,6 @@
 # Ze dotfiles
 -------------------------
-A lightweight and customized dotfile repo wich sets up a Mac to my needs, the installation step may overwrite existing dotfiles in your $HOME directory. Mostly a copy of [Mathias Bynen's](https://github.com/mathiasbynens/dotfiles) and [Zach Holman's](https://github.com/holman/dotfiles) .dotfiles.
+A lightweight and customized dotfile repo wich sets up a Mac to my needs, the installation step may overwrite existing dotfiles in your $HOME directory. Mostly a mix of components from [Mathias Bynen's](https://github.com/mathiasbynens/dotfiles), [Zach Holman's](https://github.com/holman/dotfiles) and [Nicolas Gallagher's](https://github.com/necolas/dotfiles) .dotfiles.
 
 
 ### Whats inside
@@ -10,22 +10,19 @@ A lightweight and customized dotfile repo wich sets up a Mac to my needs, the in
 * The modified Terminal Pro-theme from [@mathiasbynens](https://github.com/mathiasbynens)
 * Symlinked Sublime 2 Settings
 
+It will also check & optionally install some usefull ruby gems wich I use from day to day like SASS, Compass & Rake.
+
+
+### Things the bootstrap script depends on
+* CLT from xCode _(Needs to be installed manually)_
+* Homebrew _(Installs automatically if not found)_
++ git _(Installs automatically if not found)_
+
+
 ### Download & Install
-Install [git](http://git-scm.com/download/mac) before you move on to these steps.
 ```bash
-# Fetches the latest dotfile repo and places it into your home folder /.dotfiles
-git clone https://github.com/Inkdpixels/dotfiles.git ~/.dotfiles
-
-cd ~/.dotfiles
-
-# Move all dotfiles to the system positions & set all osx defaults.
-script/bootstrap.sh
-```
-
-### Install Additions
-```bash
-# Copy & Symlink Sublime Text 2 User preferences
-sublime2/./setup
+# Fetches the latest dotfiles into '~/.dotfiles' and runs the bootstrap script
+git clone https://github.com/Inkdpixels/dotfiles.git ~/.dotfiles && cd ~/.dotfiles && script/bootstrap.sh
 ```
 
 
