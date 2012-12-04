@@ -19,17 +19,17 @@ source ./script/lib/install-deps
 # Symlink function
 mirrorfiles() {
     # Create the necessary symbolic links between the `.dotfiles` and `HOME`
-    link "bash/.aliases"       ".aliases"
-    link "bash/.bash_profile"  ".bash_profile"
-    link "bash/.bash_prompt"   ".bash_prompt"
-    link "bash/.bashrc"        ".bashrc"
-    link "bash/.exports"       ".exports"
-    link "bash/.functions"     ".functions"
+    link "bash/aliases"       ".aliases"
+    link "bash/bash_profile"  ".bash_profile"
+    link "bash/bash_prompt"   ".bash_prompt"
+    link "bash/bashrc"        ".bashrc"
+    link "bash/exports"       ".exports"
+    link "bash/functions"     ".functions"
 
     # Git Configuration files
-    link "git/.gitattributes"  ".gitattributes"
-    link "git/.gitconfig"      ".gitconfig"
-    link "git/.gitignore"      ".gitignore"
+    link "git/gitattributes"  ".gitattributes"
+    link "git/gitconfig"      ".gitconfig"
+    link "git/gitignore"      ".gitignore"
 
     echo
     e_success "Dotfiles are symlinked!"
