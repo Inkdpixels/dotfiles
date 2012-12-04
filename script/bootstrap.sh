@@ -126,7 +126,7 @@ if ! type_exists 'compass'; then
         if ! type_exists 'sass'; then
             e_header "Installing SASS..."
             gem install sass
-            # Test if compass was installed successfully
+            # Test if SASS was installed successfully
             if ! type_exists 'sass'; then
                 exit 1
             fi
