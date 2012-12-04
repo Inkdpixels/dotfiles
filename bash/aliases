@@ -9,9 +9,13 @@ alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
 # Programm Shortcuts
+alias f='open -a Finder '
+alias fh='open -a Finder .'
+
 alias sl="subl"
 alias chrome="open -a google\ chrome"
-alias f='open -a Finder'
+alias safari="open -a safari"
+alias firefox="open -a firefox"
 
 # File size
 alias fs="stat -f \"%z bytes\""
