@@ -18,12 +18,6 @@ source ./script/lib/install-deps
 
 # Symlink function
 mirrorfiles() {
-    # Copy `.gitconfig`.
-    # Any global git commands in `~/.bash_profile.local` will be written to
-    # `.gitconfig`. This prevents them being committed to the repository.
-    # rsync -avz --quiet ${DOTFILES_DIRECTORY}/git/gitconfig  ${HOME}/.gitconfig
-
-
     # Create the necessary symbolic links between the `.dotfiles` and `HOME`
     link "bash/.aliases"       ".aliases"
     link "bash/.bash_profile"  ".bash_profile"
