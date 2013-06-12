@@ -24,6 +24,12 @@ install_deps() {
         e_success "Homebrew is installed."
     fi
 
+    # Make sure we’re using the latest Homebrew
+    brew update
+
+    # Upgrade any already-installed formulae
+    brew upgrade
+
     # Check for git
     if ! type_exists 'git'; then
         e_header "Updating Homebrew..."
