@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# A Brew-Cask function to check if an application already is installed
+function installcask() {
+	if brew cask info "${@}" | grep "Not installed" > /dev/null; then
+		brew cask install "${@}"
+	else
+		echo "${@} is already installed."
+	fi
+}
+
+# Install all basic applications to setup a production system
+installcask dropbox
+installcask firefox
+installcask firefox-aurora
+installcask google-chrome
+installcask google-chrome-canary
+installcask gmail-notifr
+installcask growlnotify
+# installcask insync
+installcask imagealpha
+installcask imageoptim
+installcask keepass-x
+installcask libre-office
+installcask opera
+# installcask phpstorm
+installcask skype
+installcask spotify
+installcask sublime-text
+installcask the-unarchiver
+installcask thunderbird
+installcask twitter
+installcask virtualbox
+installcask vlc
+# installcask webstorm

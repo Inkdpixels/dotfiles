@@ -10,6 +10,7 @@ install_deps() {
         e_success "The XCode Command Line Tools are installed."
     fi
 
+
     # Check for Homebrew
     if ! type_exists 'brew'; then
         e_header "Installing Homebrew..."
@@ -27,8 +28,15 @@ install_deps() {
     # Make sure we’re using the latest Homebrew
     brew update
 
-    # Upgrade any already-installed formulae
+    # Upgrade any already-installed brew-formula
     brew upgrade
+
+    # Install Brew Cask to install native osx apps from the terminal
+    brew tap phinze/homebrew-cask
+    brew install brew-cask
+
+    # Remove outdated brew-formulas
+    brew cleanup
 
     # Check for git
     if ! type_exists 'git'; then
@@ -45,6 +53,7 @@ install_deps() {
     else
         e_success "git is installed."
     fi
+
 
     # Check for 'z'
     if [ -d "~/code/z/z.sh" ] ; then

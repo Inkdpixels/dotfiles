@@ -15,6 +15,7 @@ export DOTFILES=$HOME/.dotfiles
 # Getting the helper functions
 source ./script/lib/utils
 source ./script/lib/install-deps
+source ./script/lib/install-apps
 
 # Symlink function
 mirrorfiles() {
@@ -46,6 +47,25 @@ sudo -v
 # Before relying on Homebrew, check that packages can be compiled
 echo "  Doing some checks to see if all required software packages are installed"
 install_deps
+
+
+
+###############################################################################
+# Installing native Applications                                              #
+###############################################################################
+e_header "
+===============================================================================
+= Native Apps                                                                 =
+==============================================================================="
+echo "This will install basic applications to setup a production system"
+read -p "Continue? (y/n) " -n 1
+echo
+
+if [[ $REPLY =~ ^[Yy]$ ]] ; then
+    $DOTFILES/script/lib/./install-apps
+else
+    e_moveon "Moving on to the next step..."
+fi
 
 
 
