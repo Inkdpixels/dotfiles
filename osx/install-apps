@@ -19,14 +19,14 @@ installcask google-chrome
 installcask google-chrome-canary
 installcask gmail-notifr
 installcask growlnotify
-# installcask insync
+installcask insync
 installcask imagealpha
 installcask imageoptim
 installcask iterm2
 installcask keepass-x
 installcask libre-office
 installcask opera
-# installcask phpstorm
+installcask phpstorm
 installcask skype
 installcask spotify
 installcask sublime-text
@@ -35,4 +35,4 @@ installcask thunderbird
 installcask twitter
 installcask virtualbox
 installcask vlc
-# installcask webstorm
+installcask webstorm
