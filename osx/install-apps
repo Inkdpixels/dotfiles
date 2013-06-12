@@ -21,6 +21,7 @@ installcask growlnotify
 # installcask insync
 installcask imagealpha
 installcask imageoptim
+installcask iterm2
 installcask keepass-x
 installcask libre-office
 installcask opera
