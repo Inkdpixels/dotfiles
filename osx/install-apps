@@ -11,6 +11,7 @@ function installcask() {
 }
 
 # Install all basic applications to setup a production system
+installcask blender
 installcask dropbox
 installcask firefox
 installcask firefox-aurora
