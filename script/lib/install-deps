@@ -1,68 +1,70 @@
 #!/bin/bash
 
 install_deps() {
-    # Check for the CLT
-    if ! type_exists 'gcc'; then
-        e_error "The XCode Command Line Tools must be installed first."
-        echo "  https://developer.apple.com/downloads"
-        exit 1
-    else
-        e_success "The XCode Command Line Tools are installed."
-    fi
+  # Check for the CLT
+  if ! type_exists 'gcc'; then
+    e_error "The XCode Command Line Tools must be installed first."
+    echo "  https://developer.apple.com/downloads"
+    exit 1
+  else
+    e_success "The XCode Command Line Tools are installed."
+  fi
 
 
-    # Check for Homebrew
+  # Check for Homebrew
+  if ! type_exists 'brew'; then
+    e_header "Installing Homebrew..."
+    ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
     if ! type_exists 'brew'; then
-        e_header "Installing Homebrew..."
-        ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
-        if ! type_exists 'brew'; then
-            e_success "Homebrew is installed."
-        else
-            e_error "Something went wrong."
-            exit 1
-        fi
+      e_success "Homebrew is installed."
     else
-        e_success "Homebrew is installed."
+      e_error "Something went wrong."
+      exit 1
     fi
+  else
+    e_success "Homebrew is installed."
+  fi
 
-    # Make sure we’re using the latest Homebrew
-    brew update
+  # Make sure we’re using the latest Homebrew
+  e_header "Updating Homebrew..."
+  brew update
 
-    # Upgrade any already-installed brew-formula
-    brew upgrade
+  # Upgrade any already-installed brew-formula
+  e_header "Upgrading any installed Homebrew formulas..."
+  brew upgrade
 
-    # Install Brew Cask to install native osx apps from the terminal
-    brew tap phinze/homebrew-cask
-    brew install brew-cask
+  # Install Brew Cask to install native osx apps from the terminal
+  e_header "Installing Homebrew Cask..."
+  brew tap phinze/homebrew-cask
+  brew install brew-cask
 
-    # Remove outdated brew-formulas
-    brew cleanup
+  # Remove outdated brew-formulas
+  e_header "Removing any outdated Homebrew formulas..."
+  brew cleanup
 
-    # Check for git
+  # Check for git
+  if ! type_exists 'git'; then
+    e_header "Installing Git..."
+    brew install git
     if ! type_exists 'git'; then
-        e_header "Updating Homebrew..."
-        brew update
-        e_header "Installing Git..."
-        brew install git
-        if ! type_exists 'git'; then
-            e_success "Git is installed."
-        else
-            e_error "Something went wrong."
-            exit 1
-        fi
+      e_success "Git is installed."
     else
-        e_success "git is installed."
+      e_error "Something went wrong."
+      exit 1
     fi
+  else
+    e_success "git is installed."
+  fi
 
 
-    # Check for 'z'
-    if [ -d "~/.dotfiles/z/z.sh" ] ; then
-        e_header "  Fetching the latest version of 'z'..."
-        mkdir -p ~/.dotfiles/z
-        curl https://raw.github.com/rupa/z/master/z.sh > ~/.dotfiles/z/z.sh
-        chmod +x ~/.dotfiles/z/z.sh
-    else
-        e_success "'z' is installed."
-    fi
-    echo
+  # Check for 'z'
+  if [ -d "~/.dotfiles/z/z.sh" ] ; then
+    e_header "  Fetching the latest version of 'z'..."
+    mkdir -p ~/.dotfiles/z
+    curl https://raw.github.com/rupa/z/master/z.sh > ~/.dotfiles/z/z.sh
+    chmod +x ~/.dotfiles/z/z.sh
+  else
+    e_success "'z' is installed."
+  fi
+  echo
 }
