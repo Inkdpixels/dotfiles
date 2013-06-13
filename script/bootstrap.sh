@@ -15,7 +15,7 @@ export DOTFILES=$HOME/.dotfiles
 # Getting the helper functions
 source ./script/lib/utils
 source ./script/lib/install-deps
-source ./script/lib/install-apps
+#source ./script/lib/install-apps
 
 # Symlink function
 mirrorfiles() {
