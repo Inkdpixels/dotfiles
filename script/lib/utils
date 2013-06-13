@@ -2,7 +2,7 @@
 
 # Header logging
 e_header() {
-	echo "\n$(tput bold ; tput setaf 6)$@$(tput sgr0)";
+	echo "$(tput bold ; tput setaf 6)$@$(tput sgr0)";
 }
 
 # Success logging
