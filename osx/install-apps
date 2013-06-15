@@ -25,6 +25,7 @@ installcask imageoptim
 installcask iterm2
 installcask keepass-x
 installcask libre-office
+installcask little-snitch
 installcask opera
 installcask phpstorm
 installcask skype
