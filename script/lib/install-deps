@@ -59,12 +59,12 @@ install_deps() {
 
 	# Check for 'z'
 	if [ -d "~/.dotfiles/z/z.sh" ] ; then
+		e_success "'z' is installed."
+	else
 		e_header "  Fetching the latest version of 'z'..."
 		mkdir -p ~/.dotfiles/z
 		curl https://raw.github.com/rupa/z/master/z.sh > ~/.dotfiles/z/z.sh
 		chmod +x ~/.dotfiles/z/z.sh
-	else
-		e_success "'z' is installed."
 	fi
 	echo
 }
