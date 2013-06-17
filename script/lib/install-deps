@@ -15,6 +15,7 @@ install_deps() {
 	if ! type_exists 'brew'; then
 		e_header "Installing Homebrew..."
 		ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+		brew doctor
 		if ! type_exists 'brew'; then
 			e_success "Homebrew is installed."
 		else
