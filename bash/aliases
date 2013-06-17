@@ -8,6 +8,12 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
+# Quick git commands
+alias g="git"
+alias gc="git commit -m"
+alias ga="git add"
+alias gp="git push"
+
 # Programm Shortcuts
 alias f='open -a Finder '
 alias fh='open -a Finder .'
