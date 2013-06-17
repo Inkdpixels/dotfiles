@@ -64,7 +64,7 @@ read -p "Continue? (y/n) " -n 1
 echo
 
 if [[ $REPLY =~ ^[Yy]$ ]] ; then
-	$DOTFILES/script/lib/./install-apps
+	$DOTFILES/osx/./install-apps
 else
 	e_moveon "Moving on to the next step..."
 fi
