@@ -33,7 +33,6 @@ installcask spotify
 installcask sublime-text
 installcask the-unarchiver
 installcask thunderbird
-installcask twitter
 installcask virtualbox
 installcask vlc
 installcask webstorm
