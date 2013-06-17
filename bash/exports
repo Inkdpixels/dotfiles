@@ -16,6 +16,3 @@ export COPYFILE_DISABLE=true
 
 # Don't add duplicate lines in the history
 export HISTCONTROL=ignoredups
-
-# Export the Homebrew-Cask target directory
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
