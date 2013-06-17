@@ -147,14 +147,14 @@ if ! type_exists 'compass'; then
 		# Check if SASS is installed as its a dependency of Compass
 		if ! type_exists 'sass'; then
 			e_header "Installing SASS..."
-			gem install sass
+			sudo gem install sass
 			# Test if SASS was installed successfully
 			if ! type_exists 'sass'; then
 				exit 1
 			fi
 		fi
 		e_header "Installing Compass..."
-		gem install compass
+		sudo gem install compass
 		# Test if compass was installed successfully
 		if ! type_exists 'compass'; then
 			e_success "Compass has been successfully installed."
@@ -170,7 +170,7 @@ fi
 # Check if Rake is installed
 if ! type_exists 'rake'; then
 	echo "Rake is not installed"
-	gem install rake
+	sudo gem install rake
 else
 	e_success "Rake is installed."
 fi
