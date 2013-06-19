@@ -58,6 +58,22 @@ install_deps() {
 	fi
 
 
+	# Check for SSH
+	if ! type_exists 'ssh'; then
+		e_header "Installing OpenSSH..."
+		brew tap homebrew/dupes
+		brew install openssh
+		if ! type_exists 'ssh'; then
+			e_success "OpenSSH is installed."
+		else
+			e_error "Something went wrong."
+			exit 1
+		fi
+	else
+		e_success "OpenSSH is installed."
+	fi
+
+
 	# Check for 'z'
 	if [ -d "~/.dotfiles/z/z.sh" ] ; then
 		e_success "'z' is installed."
