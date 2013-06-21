@@ -23,6 +23,9 @@ alias chrome="open -a google\ chrome"
 alias safari="open -a safari"
 alias firefox="open -a firefox"
 
+# Update Ruby Gems, Homebrew formulas etc.
+alias update="gem update; brew update; brew upgrade; brew cleanup"
+
 # File size
 alias fs="stat -f \"%z bytes\""
 
