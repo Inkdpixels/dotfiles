@@ -73,6 +73,16 @@ install_deps() {
 		e_success "OpenSSH is installed."
 	fi
 
+	# Check for Node
+	if ! type_exists 'node'; then
+		e_header "Installing Node..."
+		brew install node
+
+		e_header "Installing NPM..."
+		curl https://npmjs.org/install.sh | sh
+	else
+		e_success "Node is installed."
+	fi
 
 	# Check for 'z'
 	if [ -d "~/.dotfiles/z/z.sh" ] ; then
