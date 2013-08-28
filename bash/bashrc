@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+# Dont source .bash_profile when PS1 is not set (for non-interactive shells)
+# @see https://github.com/paulirish/dotfiles/commit/3d791926a65118c9119f1f0506e79351dff5dbb7
+[ -n "$PS1" ] && source ~/.bash_profile
