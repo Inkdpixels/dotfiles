@@ -18,9 +18,6 @@ APPSTACK="blender dropbox firefox firefox-aurora google-chrome google-chrome-can
 ##############################################################################################
 # Install dependencies
 ##############################################################################################
-#for file in $(find . -iname 'install.dep'); do
-#	source $file
-#done
 for file in xcode/install.dep homebrew/install.dep git/install.dep node/install.dep grunt-cli/install.dep ssh/install.dep
 	do
 		source $file
