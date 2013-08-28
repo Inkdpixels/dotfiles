@@ -1,6 +1,15 @@
 # Check if Homebrew is already installed
 if ! type_exists 'brew'; then
-	p_fail "Homebrew is not installed."
+	p_info "Homebrew is not installed."
+	ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+	brew doctor
+	if ! type_exists 'brew'; then
+		p_fail "Something went wrong..."
+	fi
 else
 	p_success "Homebrew is installed."
 fi
+
+
+# Install homebrew packages
+# brew install coreutils spark
