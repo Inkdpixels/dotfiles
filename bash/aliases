@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# System overrides
+alias ls="gls -lAh --color" # Use the grc 'ls' command iwith colored outpu instead of the native one
+
 # Git Aliases
 alias gps='git push'
 alias gpl='git pull'
