@@ -15,3 +15,8 @@ then
 
 	p_success 'The Gitconfig-File was written successfully'
 fi
+
+# Create symlinks
+symlink "$DOTFILES/git/gitattributes.symlink" "$HOME/.gitattributes"
+symlink "$DOTFILES/git/gitconfig.symlink" "$HOME/.gitconfig"
+symlink "$DOTFILES/git/gitignore.symlink" "$HOME/.gitignore"
