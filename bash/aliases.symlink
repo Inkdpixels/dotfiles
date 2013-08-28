@@ -12,15 +12,8 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
-# Git Aliases
-alias gps='git push'
-alias gpl='git pull'
-alias gc='git commit -m'
-alias gd='git diff'
-alias gco='git checkout'
-alias gb='git branch'
-alias gs='git status -sb'
-alias gundo='git reset --soft HEAD^'
+# Git Short-Alias
+alias g='git'
 
 # Programm Shortcuts
 alias sl="subl"
