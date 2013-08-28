@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# System overrides
+# System aliases/overwrites
 alias ls="gls -lAh --color" # Use the grc 'ls' command iwith colored outpu instead of the native one
 
 # Easier 'cd' navigation: .., ... etc.
@@ -17,3 +17,6 @@ alias gd='git diff'
 alias gco='git checkout'
 alias gb='git branch'
 alias gs='git status -sb'
+
+# Programm Shortcuts
+alias sl="subl"
