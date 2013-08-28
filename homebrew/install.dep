@@ -1,0 +1,6 @@
+# Check if Homebrew is already installed
+if ! type_exists 'brew'; then
+	p_fail "Homebrew is not installed."
+else
+	p_success "Homebrew is installed."
+fi

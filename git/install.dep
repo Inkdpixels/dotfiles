@@ -1,0 +1,6 @@
+# Check if Git is already installed
+if ! type_exists 'git'; then
+	p_fail "Git is not installed."
+else
+	p_success "Git is installed."
+fi

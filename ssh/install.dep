@@ -1,0 +1,6 @@
+# Check if SSH is already installed
+if ! type_exists 'ssh'; then
+	p_fail "SSH is not installed."
+else
+	p_success "SSH is installed."
+fi

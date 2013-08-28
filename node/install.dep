@@ -1,0 +1,6 @@
+# Check if Node & NPM is already installed
+if ! type_exists 'node' && ! type_exists 'npm'; then
+	p_fail "Node & NPM is not installed."
+else
+	p_success "Node & NPM is installed."
+fi

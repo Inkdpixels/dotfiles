@@ -1,0 +1,45 @@
+##############################################################################################
+# Helpers
+##############################################################################################
+# Shortcut for symlinks
+symlink () {
+	ln -s $1 $2
+	p_success "linked $1 to $2"
+}
+
+# Test whether a command exists
+type_exists() {
+	if [ `type -P $1` ]; then
+		return 0
+	fi
+	return 1
+}
+
+# A Brew-Cask function to check if an application already is installed
+# @from https://github.com/mathiasbynens/dotfiles/blob/master/.brew
+function installcask() {
+	if brew cask info "${@}" | grep "Not installed" > /dev/null; then
+		brew cask install "${@}"
+	else
+		echo "${@} is already installed."
+	fi
+}
+
+
+##############################################################################################
+# Print Helpers
+##############################################################################################
+p_info () {
+	printf "  [ \033[00;34m..\033[0m ] $1\n"
+}
+p_user () {
+	printf "\r  [ \033[0;33m?\033[0m ] $1\n"
+}
+p_success () {
+	printf "\r\033[2K  [ \033[00;32mOK\033[0m ] $1\n"
+}
+p_fail () {
+	printf "\r\033[2K  [\033[0;31mFAIL\033[0m] $1\n"
+	echo ''
+	exit
+}
