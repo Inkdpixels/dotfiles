@@ -9,5 +9,5 @@ brew install brew-cask
 p_info "Installing the following Applications: $APPSTACK"
 for application in $APPSTACK
 	do
-		echo $application
+		installcask $application
 done
