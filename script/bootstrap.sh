@@ -6,7 +6,7 @@
 ##############################################################################################
 # Shortcuts & Helper import
 ##############################################################################################
-# shortcut to this dotfiles path is $ZSH
+# shortcut to this dotfiles path is $DOTFILES
 export DOTFILES=$HOME/.dotfiles
 source lib/utils;
 
