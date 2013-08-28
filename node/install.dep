@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Check if Node.js is already installed
 if ! type_exists 'node'; then
 	p_info "Node.js is not installed."
