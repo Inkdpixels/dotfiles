@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Check if the xCode Command Line Tools are already installed.
 if ! type_exists 'gcc'; then
 	p_fail "The XCode Command Line Tools must be installed first.

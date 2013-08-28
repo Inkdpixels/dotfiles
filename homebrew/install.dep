@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Check if Homebrew is already installed
 if ! type_exists 'brew'; then
 	p_info "Homebrew is not installed."

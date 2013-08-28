@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Install Brew Cask to install native osx apps from the terminal
 p_info "Installing Homebrew Cask..."
 brew tap phinze/homebrew-cask
