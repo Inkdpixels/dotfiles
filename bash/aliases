@@ -3,6 +3,7 @@
 # System aliases/overwrites
 alias ls="gls -lAh --color" # Use the grc 'ls' command iwith colored outpu instead of the native one
 alias update="gem update; brew update; brew upgrade; brew cleanup"
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 # Easier 'cd' navigation: .., ... etc.
 alias ..="cd .."
