@@ -9,7 +9,3 @@ if ! type_exists 'brew'; then
 else
 	p_success "Homebrew is installed."
 fi
-
-
-# Install homebrew packages
-# brew install coreutils spark
