@@ -12,7 +12,7 @@ alias .....="cd ../../../.."
 # Git Aliases
 alias gps='git push'
 alias gpl='git pull'
-alias gc='git commit'
+alias gc='git commit -m'
 alias gd='git diff'
 alias gco='git checkout'
 alias gb='git branch'
