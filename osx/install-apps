@@ -1,0 +1,11 @@
+# Install Brew Cask to install native osx apps from the terminal
+p_info "Installing Homebrew Cask..."
+brew tap phinze/homebrew-cask
+brew install brew-cask
+
+# Install all Apps listed in this loop with Homebrew Cask.
+p_info "Installing the following Applications: $APPSTACK"
+for application in $APPSTACK
+	do
+		echo $application
+done
