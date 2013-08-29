@@ -1,5 +1,4 @@
 # Files with dots in them
--------------------------
 My dotfiles for OS X.
 
 
