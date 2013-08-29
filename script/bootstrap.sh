@@ -12,7 +12,7 @@ source lib/utils;
 
 # Applications wich will be installed via 'Homebew Cask'
 # @see https://github.com/phinze/homebrew-cask/tree/master/Casks
-APPSTACK="blender dropbox firefox firefox-aurora google-chrome google-chrome-canary gmail-notifr growlnotify insync imagealpha imageoptim iterm2 keepass-x libre-office little-snitch opera skype spotify sublime-text the-unarchiver thunderbird virtualbox vlc webstorm"
+APPSTACK="dropbox firefox firefox-aurora google-chrome google-chrome-canary insync imagealpha imageoptim iterm2 keepass-x libre-office little-snitch opera skype spotify sublime-text the-unarchiver thunderbird virtualbox vlc webstorm"
 
 
 ##############################################################################################
