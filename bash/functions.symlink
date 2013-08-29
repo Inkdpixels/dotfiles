@@ -21,6 +21,5 @@ function gz() {
 # Deletes a branch locally and on the origin remote.
 # @from https://github.com/holman/dotfiles
 function git-nuke() {
-	git branch -D $1
-	git push origin :$1
+	git branch -D $1 && git push origin :$1
 }
