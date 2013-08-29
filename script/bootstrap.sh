@@ -48,6 +48,15 @@ source osx/install-apps
 
 
 ##############################################################################################
+# Add the iTerm color scheme to the Application-Settings
+##############################################################################################
+open -a iTerm
+sleep 1 # Wait a bit to make sure the application is open
+open $DOTFILES/lib/Inkdpixels-Dark.itermcolors
+killall Terminal
+
+
+##############################################################################################
 # Setup OSX
 ##############################################################################################
 source osx/defaults.sh
