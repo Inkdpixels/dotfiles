@@ -67,7 +67,7 @@ source osx/install-apps
 open -a iTerm
 sleep 1 # Wait a bit to make sure the application is open
 open $DOTFILES/lib/Inkdpixels-Dark.itermcolors
-killall Terminal
+killall iTerm
 
 
 ##############################################################################################
