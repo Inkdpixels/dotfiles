@@ -1,23 +1,14 @@
 #!/usr/bin/env bash
 
-# Check if SASS is already installed
-if ! type_exists 'sass'; then
-	p_info "SASS is not installed."
-	sudo gem install sass
-	if ! type_exists 'sass'; then
-		p_fail "Something went wrong..."
+# Check if the gems listed in $RUBYGEMS are installed - If not, it will also install them.
+for rubygem in $RUBYGEMS; do
+	if ! type_exists $rubygem; then
+		p_info "$rubygem is not installed."
+		sudo gem install $rubygem
+		if ! type_exists $rubygem; then
+			p_fail "Something went wrong..."
+		fi
+	else
+		p_success "$rubygem is installed."
 	fi
-else
-	p_success "SASS is installed."
-fi
-
-# Check if Compass is already installed
-if ! type_exists 'compass'; then
-	p_info "Compass is not installed."
-	sudo gem install compass
-	if ! type_exists 'compass'; then
-		p_fail "Something went wrong..."
-	fi
-else
-	p_success "Compass is installed."
-fi
+done

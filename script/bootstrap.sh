@@ -14,6 +14,9 @@ source lib/utils;
 # @see https://github.com/phinze/homebrew-cask/tree/master/Casks
 APPSTACK="dropbox firefox firefox-aurora google-chrome google-chrome-canary insync imagealpha imageoptim iterm2 keepass-x libre-office little-snitch opera skype spotify sublime-text the-unarchiver thunderbird virtualbox vlc webstorm"
 
+# Ruby Gems
+RUBYGEMS="sass compass"
+
 
 ##############################################################################################
 # Ask for the administrator password upfront
