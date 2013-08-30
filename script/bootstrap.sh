@@ -17,6 +17,9 @@ APPSTACK="dropbox firefox firefox-aurora google-chrome google-chrome-canary insy
 # Ruby Gems
 RUBYGEMS="sass compass"
 
+# Brew packages
+BREWPACKAGES="coreutils ack bash-completion"
+
 
 ##############################################################################################
 # Ask for the administrator password upfront
