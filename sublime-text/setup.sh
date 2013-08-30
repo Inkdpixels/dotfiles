@@ -6,3 +6,7 @@ symlink "$DOTFILES/sublime-text/User" "$sublime_dir"
 
 # Grab the FreshCut theme
 git clone https://github.com/daylerees/colour-schemes.git "$sublime_dir/Dayle Rees Color Schemes"
+
+# Symlinking the "subl" terminal shortcut
+mkdir ~/bin
+ln -s "/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl" ~/bin/subl
