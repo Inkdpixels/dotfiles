@@ -1,2 +1,5 @@
 # Ignore the generated gitconfig file
 git/gitconfig.symlink
+
+# Ignore the customized bootstrap.sh config file
+config.sh

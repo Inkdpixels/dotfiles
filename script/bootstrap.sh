@@ -8,17 +8,23 @@
 ##############################################################################################
 # shortcut to this dotfiles path is $DOTFILES
 export DOTFILES=$HOME/.dotfiles
+
+# Load in helper functions and print messages
 source lib/utils;
 
-# Applications wich will be installed via 'Homebew Cask'
-# @see https://github.com/phinze/homebrew-cask/tree/master/Casks
-APPSTACK="dropbox firefox firefox-aurora google-chrome google-chrome-canary insync imagealpha imageoptim iterm2 keepass-x libre-office little-snitch opera skype spotify sublime-text the-unarchiver thunderbird virtualbox vlc webstorm"
-
-# Ruby Gems
-RUBYGEMS="sass compass"
-
-# Brew packages
-BREWPACKAGES="coreutils ack bash-completion"
+# Load in the customized config.sh - If not present, use the example config
+if ! [ -f config.sh ]
+then
+	p_user "No config file found"
+	read -p "        Do you want to use the example-file? (y/n) " -n 1
+	if [[ $REPLY =~ ^[Yy]$ ]] ; then
+		source config.sh.example
+	else
+		cp config.sh.example config.sh
+		open -a TextEdit config.sh
+		p_fail "Please edit the config file and run the bootstrap script again."
+	fi
+fi
 
 
 ##############################################################################################
