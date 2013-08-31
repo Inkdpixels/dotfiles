@@ -5,9 +5,9 @@ if ! [ -f git/gitconfig.symlink ]
 then
 	p_info 'Setup gitconfig'
 
-	p_user ' - What is your github author name?'
+	p_user ' - What is your Git author name?'
 	read -e git_authorname
-	p_user ' - What is your github author email?'
+	p_user ' - What is your Git author email?'
 	read -e git_authoremail
 
 	sed -e "s/AUTHORNAME/$git_authorname/g" -e "s/AUTHOREMAIL/$git_authoremail/g" git/gitconfig.example > git/gitconfig.symlink
