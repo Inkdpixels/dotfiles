@@ -62,6 +62,7 @@ Applications(will be installed via [Homebrew Cask](https://github.com/phinze/hom
 
 
 ## Install
+Before you download and install the dotfiles, you might want to download the [Command Line Tools for xCode](https://developer.apple.com/downloads) as they are required to run the bootstrap script.
 ```bash
 # Fetches the latest dotfiles into '~/.dotfiles' and runs the bootstrap script
 curl -LOk https://github.com/Inkdpixels/dotfiles/archive/master.zip && unzip master.zip && mv dotfiles-master/ .dotfiles/ && rm -rf master.zip && cd .dotfiles && script/bootstrap.sh
