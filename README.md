@@ -29,9 +29,7 @@ Applications(will be installed via [Homebrew Cask](https://github.com/phinze/hom
 * Blender
 * Dropbox
 * Firefox
-* Firefox Aurora
 * Google Chrome
-* Google Chrome Canary
 * InSync
 * ImageAlpha
 * ImageOptim
