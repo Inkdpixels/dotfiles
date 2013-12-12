@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-# Install Brew Cask to install native osx apps from the terminal
+# Install Brew Cask to enable bash based installation of native osx apps
 p_info "Installing Homebrew Cask..."
 brew tap phinze/homebrew-cask
 brew install brew-cask
 
-# Install all Apps listed in this loop with Homebrew Cask.
+# Install all Apps listed in the $APPSTACK variable with Homebrew Cask.
 p_info "Installing the following Applications: $APPSTACK"
 for application in $APPSTACK
 	do
