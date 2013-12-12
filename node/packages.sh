@@ -10,3 +10,14 @@ if ! type_exists 'grunt'; then
 else
 	p_success "Grunt is installed."
 fi
+
+# Check if Bower is already installed
+if ! type_exists 'bower'; then
+	p_info "Bower is not installed."
+	npm install -g bower
+	if ! type_exists 'bower'; then
+		p_fail "Something went wrong..."
+	fi
+else
+	p_success "Bower is installed."
+fi
