@@ -19,8 +19,8 @@ Homebrew formulae:
 * [Homebrew Cask](https://github.com/phinze/homebrew-cask)
 
 Node packages:
-* [Grunt CLI](gruntjs.com)
-* [Bower](bower.io)
+* [Grunt CLI](http://gruntjs.com)
+* [Bower](http://bower.io)
 
 Ruby gems:
 * [SASS](http://sass-lang.com/)
