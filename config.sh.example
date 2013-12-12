@@ -5,7 +5,7 @@
 
 # Applications wich will be installed via 'Homebew Cask'
 # @see https://github.com/phinze/homebrew-cask/tree/master/Casks
-APPSTACK="dropbox firefox google-chrome insync imagealpha imageoptim iterm2 keepass-x libreoffice little-snitch opera skype spotify sublime-text the-unarchiver thunderbird virtualbox vlc webstorm"
+APPSTACK="dropbox firefox google-chrome insync imagealpha imageoptim iterm2 keepassx libreoffice little-snitch opera skype spotify sublime-text the-unarchiver thunderbird virtualbox vlc webstorm"
 
 # Ruby Gems wich will be installed
 RUBYGEMS="sass compass"
