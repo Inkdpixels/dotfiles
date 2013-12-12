@@ -26,7 +26,6 @@ Ruby gems:
 * [Compass](http://compass-style.org/)
 
 Applications(will be installed via [Homebrew Cask](https://github.com/phinze/homebrew-cask)):
-* Blender
 * Dropbox
 * Firefox
 * Google Chrome
