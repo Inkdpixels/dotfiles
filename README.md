@@ -20,6 +20,7 @@ Homebrew formulae:
 
 Node packages:
 * [Grunt CLI](gruntjs.com)
+* [Bower](bower.io)
 
 Ruby gems:
 * [SASS](http://sass-lang.com/)
