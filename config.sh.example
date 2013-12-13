@@ -14,4 +14,4 @@ RUBYGEMS="sass compass"
 BREWPACKAGES="coreutils ack bash-completion"
 
 # Node packages wich will be installed
-NODEPACKAGES="grunt-cli bower"
+NODEPACKAGES="grunt-cli bower less"

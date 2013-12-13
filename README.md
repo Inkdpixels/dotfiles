@@ -21,6 +21,7 @@ Homebrew formulae:
 Node packages:
 * [Grunt CLI](http://gruntjs.com)
 * [Bower](http://bower.io)
+* [Less](http://lesscss.org/)
 
 Ruby gems:
 * [SASS](http://sass-lang.com/)
