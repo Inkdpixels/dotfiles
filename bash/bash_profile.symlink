@@ -26,7 +26,7 @@ export LANG="en_US"
 # You could just use `-g` instead, but I like being explicit
 complete -W "NSGlobalDomain" defaults
 
-# Load the bash completion file wich will be installed via Homebrew
+# Load the bash completion file which will be installed via Homebrew
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi

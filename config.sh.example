@@ -3,15 +3,15 @@
 # Configuration variables for the bootstrap script
 #
 
-# Applications wich will be installed via 'Homebew Cask'
+# Applications which will be installed via 'Homebew Cask'
 # @see https://github.com/phinze/homebrew-cask/tree/master/Casks
 APPSTACK="dropbox firefox google-chrome insync imagealpha imageoptim iterm2 keepassx libreoffice little-snitch opera skype spotify sublime-text the-unarchiver thunderbird virtualbox vlc webstorm"
 
-# Ruby Gems wich will be installed
+# Ruby Gems which will be installed
 RUBYGEMS="sass compass"
 
-# Brew packages wich will be installed
+# Brew packages which will be installed
 BREWPACKAGES="coreutils ack bash-completion"
 
-# Node packages wich will be installed
+# Node packages which will be installed
 NODEPACKAGES="grunt-cli bower less"
