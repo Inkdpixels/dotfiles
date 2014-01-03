@@ -3,3 +3,6 @@ git/gitconfig.symlink
 
 # Ignore the customized bootstrap.sh config file
 config.sh
+
+# Ignore the 'z' shell file which gets loaded into the shell on start.
+z/z.sh
