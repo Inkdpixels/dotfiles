@@ -6,3 +6,11 @@ config.sh
 
 # Ignore the 'z' shell file which gets loaded into the shell on start.
 z/z.sh
+
+# Ignore some auto-generated Sublime Text files
+sublime-text/User/Package Control.cache/
+sublime-text/User/Package Control.last-run
+sublime-text/User/Package Control.sublime-settings
+sublime-text/User/Package Control.system-ca-bundle
+sublime-text/User/Side Bar.sublime-settings
+sublime-text/User/bh_unicode_properties.cache
