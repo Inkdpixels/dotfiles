@@ -10,7 +10,8 @@
 	[
 		".sass-cache",
 		".git",
-		".idea"
+		".idea",
+		"node_modules"
 	],
 	"font_face": "Menlo",
 	"font_size": 12.0,
