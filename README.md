@@ -26,6 +26,7 @@ Node packages:
 Ruby gems:
 * [SASS](http://sass-lang.com/)
 * [Compass](http://compass-style.org/)
+* [Bundler](http://bundler.io/)
 
 Applications(will be installed via [Homebrew Cask](https://github.com/phinze/homebrew-cask)):
 * Dropbox
