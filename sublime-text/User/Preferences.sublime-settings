@@ -1,6 +1,6 @@
 {
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Dayle Rees Color Schemes/FreshCut.tmTheme",
+	"color_scheme": "Packages/Theme - Spacegray/base16-ocean.dark.tmTheme",
 	"file_exclude_patterns":
 	[
 		"._*",
@@ -23,7 +23,8 @@
 		"Vintage"
 	],
 	"scroll_past_end": true,
-	"tab_size": 2,
+	"tab_size": 4,
+	"theme": "Spacegray.sublime-theme",
 	"trim_trailing_white_space_on_save": true,
 	"word_wrap": "true"
 }
