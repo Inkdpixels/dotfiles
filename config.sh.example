@@ -11,7 +11,7 @@ APPSTACK="dropbox firefox google-chrome insync imagealpha imageoptim iterm2 keep
 RUBYGEMS="sass compass bundler"
 
 # Brew packages which will be installed
-BREWPACKAGES="coreutils ack bash-completion"
+BREWPACKAGES="coreutils ack bash-completion git-extras"
 
 # Node packages which will be installed
 NODEPACKAGES="grunt-cli bower less browserify"
