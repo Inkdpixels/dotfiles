@@ -10,6 +10,7 @@
 	d = diff
 	co = checkout
 	b = branch
+	lg = log --pretty=oneline
 	s = status -sb
 	undo = reset --soft HEAD^
 [color]
