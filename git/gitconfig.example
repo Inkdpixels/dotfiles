@@ -11,6 +11,7 @@
 	co = checkout
 	b = branch
 	lg = log --pretty=oneline
+	hash = rev-parse HEAD && git rev-parse HEAD | pbcopy
 	s = status -sb
 	undo = reset --soft HEAD^
 [color]
