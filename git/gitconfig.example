@@ -12,6 +12,7 @@
 	b = branch
 	lg = log --pretty=oneline
 	hash = rev-parse HEAD && git rev-parse HEAD | pbcopy
+	cleanhistory = fsck —unreachable && git gc && git prune && git gc —prune=now
 	s = status -sb
 	undo = reset --soft HEAD^
 [color]
