@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 BASE_DIR="$HOME/.dotfiles"
-OUTPUT_DIR="../tests/output"
+OUTPUT_DIR="$BASE_DIR/tests/output"
 
 source $BASE_DIR/utils/afterEach
 source $BASE_DIR/utils/beforeEach
@@ -34,7 +34,7 @@ testReturnCodeWithoutArguments() {
 testOutputForHelpCommand() {
 	beforeEach
 
-	hook help > "$OUTPUT_DIR/help.result.txt"
+	dot help > "$OUTPUT_DIR/help.result.txt"
 
 	diff "$OUTPUT_DIR/help.result.txt" "$OUTPUT_DIR/help.txt"
 	assertEquals "The dot CLI should output a instructional guide if ran with the 'help' argument." 0 $?
@@ -45,7 +45,7 @@ testOutputForHelpCommand() {
 testReturnCodeForHelpCommand() {
 	beforeEach
 
-	hook help > /dev/null
+	dot help > /dev/null
 	returnCode=$?
 	assertEquals "The dot CLI should return a success code if ran with the 'help' argument." 0 $returnCode
 

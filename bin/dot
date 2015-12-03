@@ -39,7 +39,7 @@ p_fail () {
 # Print the general cli usage guide.
 #
 print_help() {
-	echo "${bold}dot CLI.${normal}
+	echo "${underline}${bold}dotfiles CLI.${normal}${nounderline}
 
 ${underline}Available commands:${nounderline}
 help		Prints the general CLI usage.
