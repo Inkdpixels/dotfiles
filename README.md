@@ -1,6 +1,6 @@
 # Inkdpixels/dotfiles [![Build Status](https://travis-ci.org/Inkdpixels/dotfiles.svg)](https://travis-ci.org/Inkdpixels/dotfiles)
 
-> Quick setup and dotfiles CLI for quickly setting up a unix machine.
+> dotfiles with a CLI for quickly setting & updating up a unix machine.
 
 ## Installation
 ``` bash
