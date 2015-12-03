@@ -1,0 +1,17 @@
+sudo: required
+language: bash
+notifications:
+  email: false
+before_install:
+  - sudo apt-get install shunit2
+before_script:
+  - git clone https://github.com/Inkdpixels/dotfiles.git $HOME/.dotfiles
+  - cd $HOME/.dotfiles
+  - ./install
+  - export PATH=$PATH:$HOME/.dotfiles/bin
+  - cd $TRAVIS_BUILD_DIR
+  - mkdir "test_working_dir"
+  - git config --global user.email "ci@sitegeist.de"
+  - git config --global user.name "Sitegeist CI"
+script:
+  - ./runTests

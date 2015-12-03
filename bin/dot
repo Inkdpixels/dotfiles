@@ -53,12 +53,12 @@ Need help or got an issue? Report bugs at ${underline}https://github.com/Inkdpix
 if [ $# -eq 0 ]
 	then
 		print_help
+
+		exit 1
 	else
 		case "$1" in
 			"--help" | "-h" | "help")
 				print_help
-
-				exit 1
 				;;
 			*)
 				p_fail "Fatal Error: Unknown argument '$1'. For help regarding the Hook CLI execute 'dot help'."
