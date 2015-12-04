@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+#
+# Conditionally install homebrew.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+source $DOT_DIR/constants/os
+source $DOT_DIR/utils/typeExists
+source $DOT_DIR/utils/typography
+
+# Depending on the used OS, install homebrew.
+if [[ "$OS" == "OSX" ]]; then
+	if typeExists "brew"; then
+		p_success "Homebrew is installed. Continuing..."
+	else
+		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+		brew doctor
+
+		if ! type_exists "brew"; then
+			p_fail "Command 'brew' is still NOT in your path, you may need to restart your shell session to continue."
+		fi
+	fi
+fi

@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+#
+# Installs all dependencies and optional tools.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+#
+# Include helper utils.
+#
+source $DOT_DIR/utils/install
+
+#
+# Conditionally install homebrew.
+#
+. "$DOT_DIR/homebrew/install"
+
+#
+# Git installation.
+#
+install "git"

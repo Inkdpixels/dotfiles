@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+#
+# A helper function which tests if the given command is in the users $PATH.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+# Arguments:
+# $1 The command to check.
+#
+# Usage:
+# if typeExists "git"; then
+#		echo "Binary git is in your path..."
+# fi
+#
+typeExists() {
+	if [ `type -P $1` ]; then
+		return 0
+	else
+		return 1
+	fi
+}

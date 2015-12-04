@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+#
+# A helper function which tests if the given command is in the users $PATH.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+# Arguments:
+# $1 The command to check.
+#
+# Usage:
+# if typeExists "git"; then
+#		echo "Binary git is in your path..."
+# fi
+#
+DOT_DIR="$HOME/.dotfiles"
+
+source $DOT_DIR/utils/typography
+source $DOT_DIR/utils/typeExists
+
+install() {
+	if typeExists $1; then
+		p_success "Command '$1' is in your path. Continuing..."
+	else
+		# Install the dependency
+		if typeExists "apt-get"; then
+			apt-get install $1
+		elif typeExists "brew"; then
+			brew install $1
+		else
+			p_fail "No package manager found, please install either 'apt-get' or 'homebrew' to continue."
+			exit 1
+		fi
+
+		# Afterwards, check if the installation was successfull.
+		if typeExists $1; then
+			p_success "Command '$1' is in your path. Continuing..."
+		else
+			p_fail "Command '$1' is still NOT in your path, you may need to restart your shell session to continue."
+			exit 1
+		fi
+	fi
+}

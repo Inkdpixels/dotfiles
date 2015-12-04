@@ -20,8 +20,13 @@ print_help() {
 
 ${underline}Available commands:${nounderline}
 help		Prints the general CLI usage.
+install		Installs all dependencies and optional tools.
 
 Need help or got an issue? Report bugs at ${underline}https://github.com/Inkdpixels/dotfiles/issues${nounderline}."
+}
+
+install() {
+	. "$DOT_DIR/lib/install"
 }
 
 #
@@ -36,6 +41,9 @@ if [ $# -eq 0 ]
 		case "$1" in
 			"--help" | "-h" | "help")
 				print_help
+				;;
+			"install")
+				install
 				;;
 			*)
 				p_fail "Fatal Error: Unknown argument '$1'. For help regarding the dotfiles CLI execute 'dot help'."

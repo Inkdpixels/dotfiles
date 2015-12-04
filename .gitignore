@@ -1,3 +1,8 @@
+# Helper files and local test files which should not be committed.
 .last_modified
 test_working_dir/
 tests/output/*.result.txt
+
+# External sources which shouldn't be committed.
+z/
+s/

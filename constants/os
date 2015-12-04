@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+#
+# Sets a variable regarding the OS type.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+source $DOT_DIR/utils/typography
+
+#
+# Conditionally check the OSTYPE sys env.
+#
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+	OS="Linux"
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+	OS="OSX"
+else
+	p_fail "Invalid OS type. This command is currently only supported on Linux distributions and OS X."
+	exit 1
+fi
