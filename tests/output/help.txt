@@ -2,5 +2,6 @@
 
 [4mAvailable commands:[24m
 help		Prints the general CLI usage.
+install		Installs all dependencies and optional tools.
 
 Need help or got an issue? Report bugs at [4mhttps://github.com/Inkdpixels/dotfiles/issues[24m.

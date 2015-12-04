@@ -16,8 +16,6 @@ beforeEach() {
 	# Create placeholders for the CLI output tests.
 	#
 	touch "$DOT_DIR/tests/output/help.result.txt"
-	touch "$DOT_DIR/tests/output/help_hooks.result.txt"
-	touch "$DOT_DIR/tests/output/prepare-commit-msg.result.txt"
 
 	mkdir $TEST_WORKING_DIR && cd "$TEST_WORKING_DIR"
 }
