@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+#
+# The global hook CLI.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+#
+# Include helper utils.
+#
+source $DOT_DIR/utils/typography
+
+#
+# Print the general cli usage guide.
+#
+print_help() {
+	echo "${underline}${bold}dotfiles CLI.${normal}${nounderline}
+
+${underline}Available commands:${nounderline}
+help		Prints the general CLI usage.
+
+Need help or got an issue? Report bugs at ${underline}https://github.com/Inkdpixels/dotfiles/issues${nounderline}."
+}
+
+#
+# Do something depending on the passed arguments.
+#
+if [ $# -eq 0 ]
+	then
+		print_help
+
+		exit 1
+	else
+		case "$1" in
+			"--help" | "-h" | "help")
+				print_help
+				;;
+			*)
+				p_fail "Fatal Error: Unknown argument '$1'. For help regarding the dotfiles CLI execute 'dot help'."
+
+				exit 1
+				;;
+		esac
+fi
+
+exit 0

@@ -1,0 +1,19 @@
+#!/bin/sh
+
+#
+# Runs all tests which are located in the tests/ directory.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+BASE_DIR="$HOME/.dotfiles"
+SPECS=$BASE_DIR/tests/*.spec
+
+for spec in $SPECS
+do
+	if [ -f "$spec" ]; then
+		$spec
+		if [ $? -ne 0 ]; then
+			exit 1
+		fi
+	fi
+done

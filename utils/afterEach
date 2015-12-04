@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+#
+# A helper function which returns to the base directory.
+# Should be ran after executing your test statements.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+TEST_WORKING_DIR="$DOT_DIR/test_working_dir"
+
+afterEach() {
+	# Remove the git-history and node_modules of the test working directory.
+	rm -rf $TEST_WORKING_DIR
+
+	# Change back into the root directory.
+	cd $DOT_DIR
+
+	# Delete all output result diffs.
+	OUTPUT_RESULTS=$DOT_DIR/tests/output/*.result.txt
+	for result in $OUTPUT_RESULTS
+	do
+		if [ -f "$result" ]; then
+			rm $result
+		fi
+	done
+}

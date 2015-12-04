@@ -1,0 +1,17 @@
+language: bash
+notifications:
+  email: false
+addons:
+  apt:
+    packages:
+    - shunit2
+before_script:
+  - git clone https://github.com/Inkdpixels/dotfiles.git $HOME/.dotfiles
+  - cd $HOME/.dotfiles
+  - ./install
+  - export PATH=$PATH:$HOME/.dotfiles/bin
+  - cd $TRAVIS_BUILD_DIR
+  - git config --global user.email "inkdpixels+ci@gmail.com"
+  - git config --global user.name "Travis CI demo user"
+script:
+  - ./runTests

@@ -1,75 +1,29 @@
-# Files with dots in them
-My dotfiles for OS X.
+# Inkdpixels/dotfiles [![Build Status](https://travis-ci.org/Inkdpixels/dotfiles.svg)](https://travis-ci.org/Inkdpixels/dotfiles)
 
+> dotfiles with a CLI for quickly setting & updating up a unix machine.
 
-## Features
-### Automatic software installation
-Shell installations:
-* NPM
-* Homebrew
-* [z](https://github.com/rupa/z/)
-
-Homebrew formulae:
-* Ack
-* GNU core utilities
-* Git
-* Bash Completion
-* Node.js
-* OpenSSH
-* [Homebrew Cask](https://github.com/phinze/homebrew-cask)
-
-Node packages:
-* [Grunt CLI](http://gruntjs.com)
-* [Bower](http://bower.io)
-* [Less](http://lesscss.org/)
-
-Ruby gems:
-* [SASS](http://sass-lang.com/)
-* [Compass](http://compass-style.org/)
-* [Bundler](http://bundler.io/)
-
-Applications(will be installed via [Homebrew Cask](https://github.com/phinze/homebrew-cask)):
-* Dropbox
-* Firefox
-* Google Chrome
-* InSync
-* ImageAlpha
-* ImageOptim
-* iTerm2
-* KeePass-X
-* Libre Office
-* Little Snitch
-* Opera
-* Skype
-* Spotify
-* Sublime Text
-* The Unarchiver
-* Thunderbird
-* Virtualbox
-* VLC Media Player
-* WebStorm
-
-
-### Configuration files & .dotfiles
-* Bash aliases & functions
-* Global Git configuration files
-* OSX Defaults
-
-
-### Other stuff
-* The modified Terminal Pro-theme from [@mathiasbynens](https://github.com/mathiasbynens)
-
-
-
-## Install
-Before you download and install the dotfiles, you might want to download the [Command Line Tools for xCode](https://developer.apple.com/downloads) as they are required to run the bootstrap script.
-```bash
-# Fetches the latest dotfiles into '~/.dotfiles' and runs the bootstrap script
-curl -LOk https://github.com/Inkdpixels/dotfiles/archive/master.zip && unzip master.zip && mv dotfiles-master/ .dotfiles/ && rm -rf master.zip && cd .dotfiles && script/bootstrap.sh
+## Installation
+``` bash
+git clone https://github.com/Inkdpixels/dotfiles.git $HOME/.dotfiles && cd $HOME/.dotfiles && ./install && cd
 ```
 
+## CLI
+*comming soon*
 
+#### Commands
+| Command            | Description                                                     |
+| ------------------ | --------------------------------------------------------------- |
+| `dot`              | Prints the usage guidelines.                                    |
+| `hook help`        | Prints the usage guidelines.                                    |
 
-## Credits
-* [@mathiasbynens](https://github.com/mathiasbynens) – [His dotfile repo](https://github.com/mathiasbynens/dotfiles)
-* [@holman](https://github.com/holman) – [His dotfile repo](https://github.com/holman/dotfiles)
+#### YMAL
+You might also like: [@mathiasbynens](https://github.com/mathiasbynens/dotfiles) dotfiles.
+
+## License
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

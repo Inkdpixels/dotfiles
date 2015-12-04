@@ -1,0 +1,6 @@
+[4m[1mdotfiles CLI.(B[m[24m
+
+[4mAvailable commands:[24m
+help		Prints the general CLI usage.
+
+Need help or got an issue? Report bugs at [4mhttps://github.com/Inkdpixels/dotfiles/issues[24m.
