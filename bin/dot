@@ -1,39 +1,16 @@
 #!/usr/bin/env bash
 
 #
-# The dot CLI
+# The global hook CLI.
 #
-# Authors: Tyll Weiß <weiss@sitegeist.de>
+# Author: Tyll Weiß <inkdpixels@gmail.com>
 #
+DOT_DIR="$HOME/.dotfiles"
 
 #
-# Decorative text helpers.
+# Include helper utils.
 #
-underline=`tput smul`
-nounderline=`tput rmul`
-bold=`tput bold`
-normal=`tput sgr0`
-
-#
-# Base directory, where the dot CLI should be installed.
-#
-BASE_DIR="$HOME/.dotfiles"
-
-#
-# A set of helper functions.
-#
-p_success () {
-	printf "[ \033[00;32mOK\033[0m ] $1\n"
-}
-p_info () {
-	printf "[\033[1;36m .. \033[0m] $1\n"
-}
-p_warn () {
-	printf "[\033[0;33mWARN\033[0m] $1\n"
-}
-p_fail () {
-	printf "[\033[0;31mFAIL\033[0m] $1\n"
-}
+source $DOT_DIR/utils/typography
 
 #
 # Print the general cli usage guide.
@@ -61,7 +38,7 @@ if [ $# -eq 0 ]
 				print_help
 				;;
 			*)
-				p_fail "Fatal Error: Unknown argument '$1'. For help regarding the Hook CLI execute 'dot help'."
+				p_fail "Fatal Error: Unknown argument '$1'. For help regarding the dotfiles CLI execute 'dot help'."
 
 				exit 1
 				;;

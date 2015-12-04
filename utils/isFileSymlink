@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+#
+# A helper function which tests if a file is a symbolic link.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+# Arguments:
+# $1 The filepath to check.
+#
+# Usage:
+# if isFileSymlink "$HOME/.aliases"; then
+#		echo "File '$HOME/.aliases' is a symbolic link."
+# fi
+#
+isFileSymlink() {
+	if [ -L "$1" ]; then
+		return 0
+	else
+		return 1
+	fi
+}

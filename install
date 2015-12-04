@@ -3,9 +3,20 @@
 #
 # Installation script for the dot CLI.
 #
-# Authors: Tyll Weiß <weiss@sitegeist.de>, André König <koenig@sitegeist.de>
+# Authors: Tyll Weiß <inkdpixels@gmail.com>
 #
 SHELLTYPE="$(basename /$SHELL)"
+
+#
+# Test whether a command exists.
+#
+command_exists() {
+	if [ `type -P $1` ]; then
+	   return 0
+	fi
+
+  return 1
+}
 
 if [ $SHELLTYPE = "bash" ]; then
 	if [ -f "$HOME/.bashrc" ]; then

@@ -1,13 +1,23 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #
-# A helper function which cleans up the testing working directory.
+# A helper function which creates the testing working directory.
 #
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+TEST_WORKING_DIR="$DOT_DIR/test_working_dir"
+
 beforeEach() {
+	# Remove the git-history and node_modules of the test working directory.
+	rm -rf $TEST_WORKING_DIR
+
 	#
 	# Create placeholders for the CLI output tests.
 	#
-	touch "tests/output/help.result.txt"
+	touch "$DOT_DIR/tests/output/help.result.txt"
+	touch "$DOT_DIR/tests/output/help_hooks.result.txt"
+	touch "$DOT_DIR/tests/output/prepare-commit-msg.result.txt"
 
-	mkdir test_working_dir && cd test_working_dir
+	mkdir $TEST_WORKING_DIR && cd "$TEST_WORKING_DIR"
 }

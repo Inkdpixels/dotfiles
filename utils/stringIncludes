@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+#
+# A helper function which returns 0|1 if a string contains the second parameter.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+# Arguments:
+# $1 The string to check.
+# $2 The substring which should be included in the first parameter.
+#
+# Usage:
+# if stringIncludes "test" "st"; then
+#		echo "String 'test' includes substring 'st'."
+# fi
+#
+stringIncludes() {
+	string="$1"
+	substring="$2"
+
+	if [[ "$string" == *"$substring"* ]]; then
+		return 1
+	else
+		return 0
+	fi
+}
