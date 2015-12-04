@@ -11,10 +11,11 @@ git clone https://github.com/Inkdpixels/dotfiles.git $HOME/.dotfiles && cd $HOME
 *comming soon*
 
 #### Commands
-| Command            | Description                                                     |
-| ------------------ | --------------------------------------------------------------- |
-| `dot`              | Prints the usage guidelines.                                    |
-| `hook help`        | Prints the usage guidelines.                                    |
+| Command            | Description                                                               |
+| ------------------ | ------------------------------------------------------------------------- |
+| `dot`              | Prints the usage guidelines.                                              |
+| `hook install`     | Installs all hard dependencies and conditionally some other and commands. |
+| `hook help`        | Prints the usage guidelines.                                              |
 
 #### YMAL
 You might also like: [@mathiasbynens](https://github.com/mathiasbynens/dotfiles) dotfiles.
