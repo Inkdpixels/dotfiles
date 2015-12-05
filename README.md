@@ -7,8 +7,16 @@
 git clone https://github.com/Inkdpixels/dotfiles.git $HOME/.dotfiles && cd $HOME/.dotfiles && ./install && cd
 ```
 
+## Requirements
+Currently this .dotfiles repository is aimed at Linux and OSX systems, you also need a package manager like `apt-get` or `homebrew` to install all dependencies.
+
+## Whats will be installed?
+* Git
+* Homebrew (OSX only)
+* Common bash functions, aliases and exports
+
 ## CLI
-*comming soon*
+This .dotfiles repository comes bundled with an CLI, below is a list of commands you can execute.
 
 #### Commands
 | Command            | Description                                                               |
