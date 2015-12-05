@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+#
+# Append the "bin directory" in home to the $PATH
+#
+export PATH=$HOME/bin:$PATH
+
+#
+# Make vim the default editor
+#
+export EDITOR="vim"
+
+#
+# Larger bash history. (allow 32³ entries; default is 500)
+#
+export HISTSIZE=32768
+export HISTFILESIZE=$HISTSIZE
+
+#
+# Timestamps for bash history.
+# @Author www.debian-administration.org/users/rossen/weblog/1
+#
+export HISTTIMEFORMAT='%F %T '
+
+#
+# Make some commands not show up in history.
+#
+export HISTIGNORE="ls:ls *:cd:cd -:pwd;exit:date:* --help"
+
+#
+# Disabling copying the extended attribute files (._*) in archives.
+#
+export COPYFILE_DISABLE=true
+
+#
+# Don't add duplicate lines in the history.
+#
+export HISTCONTROL=ignoredups

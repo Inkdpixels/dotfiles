@@ -7,6 +7,9 @@
 #
 DOT_DIR="$HOME/.dotfiles"
 
+# system environment variables
+. $DOT_DIR/bash/.exports
+
 # Bash aliases
 . $DOT_DIR/bash/.aliases
 
