@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+#
+# Install git and the global configuration files.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+source $DOT_DIR/utils/install
+
+#
+# Install the binary if not already installed.
+#
+install "git"
