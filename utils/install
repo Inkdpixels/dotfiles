@@ -25,10 +25,17 @@ install() {
 		# Install the dependency
 		if typeExists "apt-get"; then
 			apt-get install $1
+			INSTALL_EXIT_CODE=$?
 		elif typeExists "brew"; then
 			brew install $1
+			INSTALL_EXIT_CODE=$?
 		else
 			p_fail "No package manager found, please install either 'apt-get' or 'homebrew' to continue."
+			exit 1
+		fi
+
+		# Exit the script if the installation failed.
+		if [ ! $INSTALL_EXIT_CODE -eq 0 ]; then
 			exit 1
 		fi
 
