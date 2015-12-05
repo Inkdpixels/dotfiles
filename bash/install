@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+#
+# Conditionally install homebrew.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+SOURCE_STRING=". $DOT_DIR/bash/source"
+
+source $DOT_DIR/constants/profile
+source $DOT_DIR/utils/typography
+
+# Append the "source" file to the $DETECTED_PROFILE.
+if grep -Fxq "$SOURCE_STRING" "$DETECTED_PROFILE"; then
+	p_success "Bash aliases and functions already installed. Continuing..."
+else
+	p_info "Installing the bash aliases and functions..."
+
+	echo "" >> $DETECTED_PROFILE
+	echo "# Source all aliases and functions from the .dotfiles repository." >> $DETECTED_PROFILE
+	echo "$SOURCE_STRING" >> $DETECTED_PROFILE
+
+	p_success "From now on bash aliases and functions should be sourced on each new bash session."
+fi

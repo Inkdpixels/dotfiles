@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+
+#
+# Functions which will lead to a leaner workflow in the bash.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+source $DOT_DIR/constants/os
+
+#
+# If we're on OSX, the `cdf` function can be used to quickly jump to the frontmost Finder window.
+#
+if [[ "$OS" == "OSX" ]]; then
+	function cdf() {
+		cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
+	}
+fi
+
+#
+# Create a new directory and enter it.
+#
+function mkd() {
+    mkdir -p "$@" && cd "$@";
+}
+
+#
+# Which process is using a specific port.
+# @Author @akoenig
+#
+function whoisusingport () {
+  lsof -i tcp:$*
+}
+
+#
+# Get the gzipped size of the given file.
+#
+function gz() {
+	echo "orig size    (bytes): "
+	cat "$1" | wc -c
+	echo "gzipped size (bytes): "
+	gzip -c "$1" | wc -c
+}
+
+#
+# Deletes a branch locally and on the origin remote.
+# @from https://github.com/holman/dotfiles
+#
+function git-nuke() {
+	git branch -D $1 && git push origin --delete $1
+}

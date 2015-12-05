@@ -16,11 +16,14 @@ if [[ "$OS" == "OSX" ]]; then
 	if typeExists "brew"; then
 		p_success "Homebrew is installed. Continuing..."
 	else
+		p_info "Installing homebrew..."
 		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 		brew doctor
 
 		if ! type_exists "brew"; then
 			p_fail "Command 'brew' is still NOT in your path, you may need to restart your shell session to continue."
+
+			exit 1
 		fi
 	fi
 fi

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+#
+# Source all bash related files.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+# Bash aliases
+. $DOT_DIR/bash/.aliases
+
+# Bash functions
+. $DOT_DIR/bash/.functions

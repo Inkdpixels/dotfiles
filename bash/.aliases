@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+#
+# General aliases to save time.
+# EVERY SECOND COUNTS M8!
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+
+#
+# Get the file size of the given file.
+#
+alias fs="stat -f \"%z bytes\""
+
+#
+# Navigate up the directory tree easier with 'cd'.
+#
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+#
+# Short aliases for several binaries.
+#
+alias g="git"
+alias a="atom"

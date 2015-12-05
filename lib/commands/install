@@ -21,3 +21,8 @@ source $DOT_DIR/utils/install
 # Git installation.
 #
 install "git"
+
+#
+# Install the bash aliases & functions.
+#
+. "$DOT_DIR/bash/install"

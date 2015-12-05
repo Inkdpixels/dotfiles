@@ -5,55 +5,11 @@
 #
 # Authors: Tyll Weiß <inkdpixels@gmail.com>
 #
-SHELLTYPE="$(basename /$SHELL)"
+DOT_DIR="$HOME/.dotfiles"
 
-#
-# Test whether a command exists.
-#
-command_exists() {
-	if [ `type -P $1` ]; then
-	   return 0
-	fi
+source $DOT_DIR/constants/profile
 
-  return 1
-}
-
-if [ $SHELLTYPE = "bash" ]; then
-	if [ -f "$HOME/.bashrc" ]; then
-		DETECTED_PROFILE="$HOME/.bashrc"
-	elif [ -f "$HOME/.bash_profile" ]; then
-		DETECTED_PROFILE="$HOME/.bash_profile"
-	fi
-	elif [ $SHELLTYPE = "zsh" ]; then
-		DETECTED_PROFILE="$HOME/.zshrc"
-fi
-
-if [ -z $DETECTED_PROFILE ]; then
-	if [ -f "$PROFILE" ]; then
-		DETECTED_PROFILE="$PROFILE"
-	elif [ -f "$HOME/.profile" ]; then
-		DETECTED_PROFILE="$HOME/.profile"
-	elif [ -f "$HOME/.bashrc" ]; then
-		DETECTED_PROFILE="$HOME/.bashrc"
-	elif [ -f "$HOME/.bash_profile" ]; then
-		DETECTED_PROFILE="$HOME/.bash_profile"
-	elif [ -f "$HOME/.zshrc" ]; then
-		DETECTED_PROFILE="$HOME/.zshrc"
-	fi
-fi
-
-if [ -z $DETECTED_PROFILE ]; then
-	echo "Seems like the dot CLI couldn't be installed.
-
-Log:
-Profile	 $DETECTED_PROFILE
-Shelltype:	$SHELLTYPE
-
-Please report this issue with the values reported above.
-https://github.com/Inkdpixels/dotfiles/issues"
-
-	exit 1
-else
+if [ ! -z $DETECTED_PROFILE ]; then
 	echo "Installing the dot CLI into $DETECTED_PROFILE..."
 	echo "export PATH=$PATH:`pwd/bin`" >> $DETECTED_PROFILE && source $DETECTED_PROFILE
 	echo "Success. Type in 'dot help' to get started."
