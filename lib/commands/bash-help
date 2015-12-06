@@ -12,13 +12,21 @@ source $DOT_DIR/lib/utils/typography
 echo "${underline}${bold}dotfiles CLI.${normal}${nounderline}
 
 ${underline}Aliases${nounderline}
-${bold}'g' -> Shortcut for the 'git' command.${normal}				Usage: 'g pull origin master'
-${bold}'a' -> Opens the given file/directory in the 'atom' editor.${normal}	Usage: 'a .'
-${bold}'fs' -> Returns the size of the file.${normal}				Usage: 'fs path/to/my/file'
-${bold}'..' -> Navigates 1 directory up via 'cd'.${normal}			Usage: '..'
-${bold}'...' -> Navigates 2 directories up via 'cd'.${normal}			Usage: '...'
-${bold}'....' -> Navigates 3 directories up via 'cd'.${normal}			Usage: '....'
-${bold}'.....' -> Navigates 4 directories up via 'cd'.${normal}			Usage: '.....'
-${bold}'......' -> Navigates 5 directories up via 'cd'.${normal}		Usage: '......'
+${bold}'g' -> Shortcut for the 'git' command.${normal}							Usage: 'g pull origin master'
+${bold}'a' -> Opens the given file/directory in the 'atom' editor.${normal}				Usage: 'a .'
+${bold}'fs' -> Returns the size of the file.${normal}							Usage: 'fs path/to/my/file'
+${bold}'..' -> Navigates 1 directory up via 'cd'.${normal}						Usage: '..'
+${bold}'...' -> Navigates 2 directories up via 'cd'.${normal}						Usage: '...'
+${bold}'....' -> Navigates 3 directories up via 'cd'.${normal}						Usage: '....'
+${bold}'.....' -> Navigates 4 directories up via 'cd'.${normal}						Usage: '.....'
+${bold}'......' -> Navigates 5 directories up via 'cd'.${normal}					Usage: '......'
+
+${underline}Functions${nounderline}
+${bold}'cdf' -> cd's into the frontmost Finder window(OSX only).${normal}				Usage: 'cdf'
+${bold}'mkd' -> Creates and cd's into the given directory name.${normal}				Usage: 'mkd myDirectory'
+${bold}'whoisusingport' -> Outputs a list of processes which are using the given port.${normal}		Usage: 'whoisusingport 8001'
+${bold}'gz' -> Outputs the normal and gzipped size of the given file.${normal}				Usage: 'gz path/to/my/file'
+${bold}'start-mysql' -> Conditionally starts the mysql.server service.${normal}				Usage: 'start-mysql'
+${bold}'add-ssh' -> Add the local ssh key to the ssh agent..${normal}					Usage: 'add-ssh'
 
 Need help or got an issue? Head over to ${underline}https://github.com/Inkdpixels/dotfiles/issues${nounderline}."

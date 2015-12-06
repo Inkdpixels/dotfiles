@@ -32,5 +32,6 @@ ${underline}Misc. helpers${nounderline}
 ${bold}'g cleanhistory' -> Cleans up the local git history.${normal}			Usage: 'g cleanhistory'
 ${bold}'g undo' -> Reverts the last commit but preserves the changes made.${normal}	Usage: 'g undo'
 ${bold}'git-hash' -> Copies the current checked out hash to the clipboard.${normal}	Usage: 'git-hash'
+${bold}'git-nuke' -> Deletes the given branch name locally and on the remote.${normal}	Usage: 'git-nuke branchName'
 
 Need help or got an issue? Head over to ${underline}https://github.com/Inkdpixels/dotfiles/issues${nounderline}."
