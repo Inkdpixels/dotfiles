@@ -29,9 +29,11 @@ fi
 #
 # Symlink the global configuration file.
 #
+p_info "Symlinking the global .npmrc file..."
 symlink "$DOT_DIR/npm/.npmrc" "$HOME/.npmrc"
 
 #
 # Install global npm packages.
 #
+p_info "Installing the global npm packages..."
 npm install -g caniuse-cmd semantic-release-cli

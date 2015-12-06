@@ -18,4 +18,6 @@ if [ ! -d "$DOT_DIR/eg/src" ]; then
 	p_info "Installing the 'eg' command..."
 	git clone https://github.com/srsudar/eg $DOT_DIR/eg/src
 	symlink "$DOT_DIR/eg/src/eg_exec.py" "/usr/local/bin/eg"
+else
+	p_success "Command 'eg' already installed. Continuing..."
 fi

@@ -15,12 +15,8 @@ source $DOT_DIR/lib/utils/fileExists
 # Symlink/create the global configuration.
 #
 if [ -d "$HOME/.atom" ]; then
-	p_user "Would you like to symlink the global atom configuration? (y/n)"
-	read -n 1;
-	echo ""
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
-		mkdir -p "$HOME/.atom"
-		symlink "$DOT_DIR/atom/config.cson" "$HOME/.atom/config.cson"
-		symlink "$DOT_DIR/atom/snippets.cson" "$HOME/.atom/snippets.cson"
-	fi;
+	p_info "Installing the global atom configuration..."
+	mkdir -p "$HOME/.atom"
+	symlink "$DOT_DIR/atom/config.cson" "$HOME/.atom/config.cson"
+	symlink "$DOT_DIR/atom/snippets.cson" "$HOME/.atom/snippets.cson"
 fi
