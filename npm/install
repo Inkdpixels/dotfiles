@@ -29,7 +29,6 @@ fi
 #
 # Symlink the global configuration file.
 #
-p_info "Symlinking the global .npmrc..."
 symlink "$DOT_DIR/npm/.npmrc" "$HOME/.npmrc"
 
 #
