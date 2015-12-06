@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+#
+# Install the prm project manager.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+SOURCE_STRING=". $DOT_DIR/prm/source"
+
+source $DOT_DIR/lib/constants/profile
+source $DOT_DIR/lib/utils/typography
+
+if [ ! -d "$DOT_DIR/prm/src" ]; then
+	p_info "Installing prm..."
+	git clone https://github.com/eivind88/prm.git $DOT_DIR/prm/src
+
+	# Append the "source" file to the $DETECTED_PROFILE.
+	p_info "Appending the source file of 'prm' to your detected profile..."
+
+	echo "" >> $DETECTED_PROFILE
+	echo "# Source 'prm' from the .dotfiles repository." >> $DETECTED_PROFILE
+	echo "$SOURCE_STRING" >> $DETECTED_PROFILE
+
+	p_success "From now on the 'prm' binary should be sourced on each new bash session."
+else
+	p_success "prm is already installed. Continuing..."
+fi

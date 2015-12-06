@@ -22,6 +22,7 @@ Currently this .dotfiles repository is aimed at Linux and OSX systems, you also 
 * [z](https://github.com/rupa/z)
 * [s](https://github.com/haosdent/s)
 * [stormSSH](https://github.com/emre/storm)
+* [prm](https://github.com/eivind88/prm)
 
 ## CLI
 This .dotfiles repository comes bundled with an CLI, below is a list of commands you can execute.

@@ -7,3 +7,4 @@ tests/output/*.result.txt
 z/src/
 s/src/
 eg/src/
+prm/src/

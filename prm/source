@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+#
+# Source the 'z' script.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+#
+# As explained in the prm repository, we should assign a alias instead of sourcing the file.
+# https://github.com/eivind88/prm#installation
+#
+alias prm=". $DOT_DIR/prm/src/prm.sh"
