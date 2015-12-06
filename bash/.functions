@@ -61,3 +61,11 @@ function start-mysql {
     mysql.server start
   fi
 }
+
+#
+# Add the local ssh key to the ssh agent.
+#
+function add-ssh {
+  eval `ssh-agent -s`
+  ssh-add
+}
