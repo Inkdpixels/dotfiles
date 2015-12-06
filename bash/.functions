@@ -12,7 +12,7 @@ source $DOT_DIR/constants/os
 #
 # If we're on OSX, the `cdf` function can be used to quickly jump to the frontmost Finder window.
 #
-if [[ "$OS" == "OSX" ]]; then
+if [ "$OS" == "OSX" ]; then
 	function cdf() {
 		cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
 	}

@@ -12,7 +12,7 @@ source $DOT_DIR/utils/typeExists
 source $DOT_DIR/utils/typography
 
 # Depending on the used OS, install homebrew.
-if [[ "$OS" == "OSX" ]]; then
+if [ "$OS" == "OSX" ]; then
 	if typeExists "brew"; then
 		p_success "Homebrew is installed. Continuing..."
 	else
