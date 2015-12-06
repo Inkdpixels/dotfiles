@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+#
+# Install composer.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+source $DOT_DIR/lib/utils/typography
+source $DOT_DIR/lib/utils/typeExists
+
+#
+# Install npm if not already installed.
+#
+if typeExists "composer"; then
+	p_success "composer is already installed. Continuing..."
+else
+	p_info "Installing composer..."
+	if type_exists "php"; then
+		curl -sS https://getcomposer.org/installer | php
+
+		if ! type_exists "composer"; then
+			p_fail "Command 'composer' is still NOT in your path, you may need to restart your shell session and re-run this command."
+
+			exit 1
+		fi
+	else
+		p_fail "PHP needs to be installed on your system to use the composer binary, please install PHP and re-run this command."
+
+		exit 1
+	fi
+fi
