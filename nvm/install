@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+#
+# Install nvm and set the correct nvm stable version.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+source $DOT_DIR/lib/utils/typography
+
+p_info "Installing/Updating nvm..."
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash
