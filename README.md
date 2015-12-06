@@ -16,6 +16,8 @@ Currently this .dotfiles repository is aimed at Linux and OSX systems, you also 
 * Common bash functions, aliases and exports
 * nvm
 * npm
+* caniuse-cmd
+* semantic-release-cli
 
 ## CLI
 This .dotfiles repository comes bundled with an CLI, below is a list of commands you can execute.

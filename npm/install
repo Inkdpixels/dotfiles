@@ -10,6 +10,9 @@ DOT_DIR="$HOME/.dotfiles"
 source $DOT_DIR/lib/utils/typography
 source $DOT_DIR/lib/utils/typeExists
 
+#
+# Install npm if not already installed.
+#
 if typeExists "npm"; then
 	p_success "npm is installed. Continuing..."
 else
@@ -17,11 +20,19 @@ else
 	curl https://www.npmjs.org/install.sh | sh
 
 	if ! type_exists "npm"; then
-		p_fail "Command 'npm' is still NOT in your path, you may need to restart your shell session to continue."
+		p_fail "Command 'npm' is still NOT in your path, you may need to restart your shell session and re-run this command."
 
 		exit 1
 	fi
 fi
 
+#
+# Symlink the global configuration file.
+#
 p_info "Symlinking the global .npmrc..."
 symlink "$DOT_DIR/npm/.npmrc" "$HOME/.npmrc"
+
+#
+# Install global npm packages.
+#
+npm install -g caniuse-cmd semantic-release-cli
