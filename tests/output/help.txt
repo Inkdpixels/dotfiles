@@ -2,6 +2,9 @@
 
 [4mAvailable commands:[24m
 help		Prints the general CLI usage.
+help:git	Prints all available git related aliases & functions.
+help:bash	Prints all available bash aliases & functions.
 install		Installs all dependencies and optional tools.
+self-update	Self-Updates the local .dotfiles repository.
 
-Need help or got an issue? Report bugs at [4mhttps://github.com/Inkdpixels/dotfiles/issues[24m.
+Need help or got an issue? Head over to [4mhttps://github.com/Inkdpixels/dotfiles/issues[24m.

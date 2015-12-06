@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-BASE_DIR="$HOME/.dotfiles"
-OUTPUT_DIR="$BASE_DIR/tests/output"
+DOT_DIR="$HOME/.dotfiles"
+OUTPUT_DIR="$DOT_DIR/tests/output"
 
-source $BASE_DIR/utils/afterEach
-source $BASE_DIR/utils/beforeEach
+source $DOT_DIR/lib/utils/afterEach
+source $DOT_DIR/lib/utils/beforeEach
 
 #
 # Tests for invalid arguments
