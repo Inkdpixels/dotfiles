@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+#
+# Print the general cli usage guide.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+source $DOT_DIR/lib/utils/typography
+
+echo "${underline}${bold}dotfiles CLI.${normal}${nounderline}
+
+${underline}Available commands:${nounderline}
+help		Prints the general CLI usage.
+help:git	Prints all available git related aliases & functions.
+help:bash	Prints all available bash aliases & functions.
+install		Installs all dependencies and optional tools.
+self-update	Self-Updates the local .dotfiles repository.
+
+Need help or got an issue? Head over to ${underline}https://github.com/Inkdpixels/dotfiles/issues${nounderline}."

@@ -35,6 +35,8 @@ This .dotfiles repository comes bundled with an CLI, below is a list of commands
 | `dot install`      | Installs all hard dependencies and conditionally some other and binaries. |
 | `dot self-update`  | Self-Updates the local .dotfiles repository.                              |
 | `dot help`         | Prints the usage guidelines.                                              |
+| `dot help:git`     | Prints all available git related aliases.                                 |
+| `dot help:bash`    | Prints all available bash aliases & functions.                            |
 
 #### YMAL
 You might also like: [@mathiasbynens](https://github.com/mathiasbynens/dotfiles) dotfiles.

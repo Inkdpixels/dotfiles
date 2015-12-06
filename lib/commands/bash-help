@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+
+#
+# Prints all available bash aliases & functions.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+source $DOT_DIR/lib/utils/typography
+
+echo "${underline}${bold}dotfiles CLI.${normal}${nounderline}
+
+${underline}Aliases${nounderline}
+${bold}'g' -> Shortcut for the 'git' command.${normal}				Usage: 'g pull origin master'
+${bold}'a' -> Opens the given file/directory in the 'atom' editor.${normal}	Usage: 'a .'
+${bold}'fs' -> Returns the size of the file.${normal}				Usage: 'fs path/to/my/file'
+${bold}'..' -> Navigates 1 directory up via 'cd'.${normal}			Usage: '..'
+${bold}'...' -> Navigates 2 directories up via 'cd'.${normal}			Usage: '...'
+${bold}'....' -> Navigates 3 directories up via 'cd'.${normal}			Usage: '....'
+${bold}'.....' -> Navigates 4 directories up via 'cd'.${normal}			Usage: '.....'
+${bold}'......' -> Navigates 5 directories up via 'cd'.${normal}		Usage: '......'
+
+Need help or got an issue? Head over to ${underline}https://github.com/Inkdpixels/dotfiles/issues${nounderline}."

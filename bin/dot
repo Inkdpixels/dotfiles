@@ -13,19 +13,17 @@ DOT_DIR="$HOME/.dotfiles"
 source $DOT_DIR/lib/utils/typography
 
 #
-# Print the general cli usage guide.
+# Commands
 #
 print_help() {
-	echo "${underline}${bold}dotfiles CLI.${normal}${nounderline}
-
-${underline}Available commands:${nounderline}
-help		Prints the general CLI usage.
-install		Installs all dependencies and optional tools.
-self-update	Self-Updates the local .dotfiles repository.
-
-Need help or got an issue? Report bugs at ${underline}https://github.com/Inkdpixels/dotfiles/issues${nounderline}."
+	. "$DOT_DIR/lib/commands/help"
 }
-
+print_git_help() {
+	. "$DOT_DIR/lib/commands/git-help"
+}
+print_bash_help() {
+	. "$DOT_DIR/lib/commands/bash-help"
+}
 install() {
 	. "$DOT_DIR/lib/commands/install"
 }
@@ -45,6 +43,12 @@ if [ $# -eq 0 ]
 		case "$1" in
 			"--help" | "-h" | "help")
 				print_help
+				;;
+			"help:git")
+				print_git_help
+				;;
+			"help:bash")
+				print_bash_help
 				;;
 			"install")
 				install

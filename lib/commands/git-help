@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+#
+# Prints all available git related aliases.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+source $DOT_DIR/lib/utils/typography
+
+echo "${underline}${bold}dotfiles CLI.${normal}${nounderline}
+
+${underline}General${nounderline}
+${bold}'g' -> Shortcut for the 'git' command.${normal}					Usage: 'g fetch'
+
+${underline}Remote helpers${nounderline}
+${bold}'g c' -> Shortcut for the 'git commit -m' command.${normal}			Usage: 'g c '[TASK] My commit message.''
+${bold}'g p' -> Shortcut for the 'git push' command.${normal}				Usage: 'g p'
+
+${underline}Local helpers${nounderline}
+${bold}'g up' -> Shortcut for the 'git pull' command.${normal}				Usage: 'g up'
+${bold}'g d' -> Shortcut for the 'git diff' command.${normal}				Usage: 'g d'
+${bold}'g co' -> Shortcut for the 'git checkout' command.${normal}			Usage: 'g co myBranch'
+${bold}'g b' -> Shortcut for the 'git branch' command.${normal}				Usage: 'g b branchNameToCreate'
+${bold}'g lg' -> Prettified 'git log' command.${normal}					Usage: 'g lg'
+${bold}'g s' -> Prettified 'git status' command.${normal}				Usage: 'g s'
+${bold}'g branches' -> Outputs a list of all local and remote branches.${normal}	Usage: 'g branches'
+${bold}'g remotes' -> Outputs a list of all added remotes.${normal}			Usage: 'g remotes'
+
+${underline}Misc. helpers${nounderline}
+${bold}'g hash' -> Copies the current checked out hash to the clipboard.${normal}	Usage: 'g hash'
+${bold}'g cleanhistory' -> Cleans up the local git history.${normal}			Usage: 'g cleanhistory'
+${bold}'g undo' -> Reverts the last commit but preserves the changes made.${normal}	Usage: 'g undo'
+
+Need help or got an issue? Head over to ${underline}https://github.com/Inkdpixels/dotfiles/issues${nounderline}."
