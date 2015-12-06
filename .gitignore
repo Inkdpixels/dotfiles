@@ -6,3 +6,4 @@ tests/output/*.result.txt
 # External sources which shouldn't be committed.
 z/
 s/
+eg/src/

@@ -7,7 +7,7 @@
 #
 DOT_DIR="$HOME/.dotfiles"
 
-for file in $DOT_DIR/{homebrew,git,bash,nvm,npm,atom}/install; do
+for file in $DOT_DIR/{homebrew,git,bash,nvm,npm,atom,eg}/install; do
 	[ -r "$file" ] && [ -f "$file" ] && . "$file";
 done;
 unset file;
