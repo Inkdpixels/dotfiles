@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+#
+# Self-Updates the local .dotfiles repository.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+cd $DOT_DIR && git pull origin master && cd

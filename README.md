@@ -32,8 +32,8 @@ This .dotfiles repository comes bundled with an CLI, below is a list of commands
 #### Commands
 | Command            | Description                                                               |
 | ------------------ | ------------------------------------------------------------------------- |
-| `dot`              | Prints the usage guidelines.                                              |
 | `dot install`      | Installs all hard dependencies and conditionally some other and binaries. |
+| `dot self-update`  | Self-Updates the local .dotfiles repository.                              |
 | `dot help`         | Prints the usage guidelines.                                              |
 
 #### YMAL
