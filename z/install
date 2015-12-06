@@ -10,11 +10,7 @@ SOURCE_STRING=". $DOT_DIR/z/source"
 
 source $DOT_DIR/lib/constants/profile
 source $DOT_DIR/lib/utils/typography
-source $DOT_DIR/lib/utils/fileExists
 
-#
-# Symlink/create the global configuration.
-#
 if [ ! -d "$DOT_DIR/z/src" ]; then
 	p_info "Installing the 'z' command..."
 	git clone https://github.com/rupa/z.git $DOT_DIR/z/src
