@@ -33,8 +33,8 @@ This .dotfiles repository comes bundled with an CLI, below is a list of commands
 | Command            | Description                                                               |
 | ------------------ | ------------------------------------------------------------------------- |
 | `dot`              | Prints the usage guidelines.                                              |
-| `hook install`     | Installs all hard dependencies and conditionally some other and binaries. |
-| `hook help`        | Prints the usage guidelines.                                              |
+| `dot install`      | Installs all hard dependencies and conditionally some other and binaries. |
+| `dot help`         | Prints the usage guidelines.                                              |
 
 #### YMAL
 You might also like: [@mathiasbynens](https://github.com/mathiasbynens/dotfiles) dotfiles.
