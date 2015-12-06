@@ -7,7 +7,7 @@
 #
 DOT_DIR="$HOME/.dotfiles"
 
-source $DOT_DIR/constants/os
+source $DOT_DIR/lib/constants/os
 
 #
 # If we're on OSX, the `cdf` function can be used to quickly jump to the frontmost Finder window.

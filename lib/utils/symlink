@@ -14,9 +14,9 @@
 #
 DOT_DIR="$HOME/.dotfiles"
 
-source $DOT_DIR/utils/typography
-source $DOT_DIR/utils/fileExists
-source $DOT_DIR/utils/isFileSymlink
+source $DOT_DIR/lib/utils/typography
+source $DOT_DIR/lib/utils/fileExists
+source $DOT_DIR/lib/utils/isFileSymlink
 
 symlink() {
 	if fileExists "$2"; then

@@ -7,10 +7,10 @@
 #
 DOT_DIR="$HOME/.dotfiles"
 
-source $DOT_DIR/utils/install
-source $DOT_DIR/utils/symlink
-source $DOT_DIR/constants/os
-source $DOT_DIR/utils/typography
+source $DOT_DIR/lib/utils/install
+source $DOT_DIR/lib/utils/symlink
+source $DOT_DIR/lib/constants/os
+source $DOT_DIR/lib/utils/typography
 
 #
 # Install the binary if not already installed.

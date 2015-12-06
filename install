@@ -7,7 +7,7 @@
 #
 DOT_DIR="$HOME/.dotfiles"
 
-source $DOT_DIR/constants/profile
+source $DOT_DIR/lib/constants/profile
 
 if [ ! -z $DETECTED_PROFILE ]; then
 	echo "Installing the dot CLI into $DETECTED_PROFILE..."

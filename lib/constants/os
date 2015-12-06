@@ -7,7 +7,7 @@
 #
 DOT_DIR="$HOME/.dotfiles"
 
-source $DOT_DIR/utils/typography
+source $DOT_DIR/lib/utils/typography
 
 #
 # Conditionally check the OSTYPE sys env.

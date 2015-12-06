@@ -8,8 +8,8 @@
 DOT_DIR="$HOME/.dotfiles"
 SOURCE_STRING=". $DOT_DIR/bash/source"
 
-source $DOT_DIR/constants/profile
-source $DOT_DIR/utils/typography
+source $DOT_DIR/lib/constants/profile
+source $DOT_DIR/lib/utils/typography
 
 # Append the "source" file to the $DETECTED_PROFILE.
 if grep -Fxq "$SOURCE_STRING" "$DETECTED_PROFILE"; then

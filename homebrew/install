@@ -7,9 +7,9 @@
 #
 DOT_DIR="$HOME/.dotfiles"
 
-source $DOT_DIR/constants/os
-source $DOT_DIR/utils/typeExists
-source $DOT_DIR/utils/typography
+source $DOT_DIR/lib/constants/os
+source $DOT_DIR/lib/utils/typeExists
+source $DOT_DIR/lib/utils/typography
 
 # Depending on the used OS, install homebrew.
 if [ "$OS" == "OSX" ]; then
