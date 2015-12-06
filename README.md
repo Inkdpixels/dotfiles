@@ -20,6 +20,7 @@ Currently this .dotfiles repository is aimed at Linux and OSX systems, you also 
 * semantic-release-cli
 * [eg](https://github.com/srsudar/eg)
 * [z](https://github.com/rupa/z)
+* [s](https://github.com/haosdent/s)
 * [stormSSH](https://github.com/emre/storm)
 
 ## CLI

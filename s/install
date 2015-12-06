@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+#
+# Downloads the 'z' sources and symlinks the binary to the path.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+SOURCE_STRING=". $DOT_DIR/s/source"
+
+source $DOT_DIR/lib/constants/profile
+source $DOT_DIR/lib/utils/typography
+
+if [ ! -d "$DOT_DIR/s/src" ]; then
+	p_info "Installing the 's' command..."
+	git clone https://github.com/haosdent/s.git $DOT_DIR/s/src
+
+	# Append the "source" file to the $DETECTED_PROFILE.
+	p_info "Appending the source file of 's' to your detected profile..."
+
+	echo "" >> $DETECTED_PROFILE
+	echo "# Source 's' from the .dotfiles repository." >> $DETECTED_PROFILE
+	echo "$SOURCE_STRING" >> $DETECTED_PROFILE
+
+	p_success "From now on the 's' binary should be sourced on each new bash session."
+else
+	p_success "s is already installed. Continuing..."
+fi
