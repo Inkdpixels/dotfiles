@@ -19,6 +19,7 @@ Currently this .dotfiles repository is aimed at Linux and OSX systems, you also 
 * caniuse-cmd
 * semantic-release-cli
 * composer
+* OpenSSH
 * [eg](https://github.com/srsudar/eg)
 * [z](https://github.com/rupa/z)
 * [s](https://github.com/haosdent/s)
