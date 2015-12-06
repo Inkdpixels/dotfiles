@@ -11,9 +11,11 @@ git clone https://github.com/Inkdpixels/dotfiles.git $HOME/.dotfiles && cd $HOME
 Currently this .dotfiles repository is aimed at Linux and OSX systems, you also need a package manager like `apt-get` or `homebrew` to install all dependencies.
 
 ## Whats will be installed?
-* Git
+* Git (Including the global configuration files)
 * Homebrew (OSX only)
 * Common bash functions, aliases and exports
+* nvm
+* npm
 
 ## CLI
 This .dotfiles repository comes bundled with an CLI, below is a list of commands you can execute.
