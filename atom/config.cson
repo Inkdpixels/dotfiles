@@ -1,0 +1,19 @@
+"*":
+  "exception-reporting":
+    userId: "b4970501-9e1d-dfd6-dd73-d6fe12105e06"
+  welcome:
+    showOnStartup: false
+  core:
+    excludeVcsIgnoredPaths: false
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: false
+  editor:
+    invisibles: {}
+    fontSize: 13
+    softTabs: false
+    showInvisibles: true
+  linter:
+    errorPanelHeight: 140
+  "merge-conflicts": {}
+  emmet: {}
