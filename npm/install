@@ -14,7 +14,7 @@ source $DOT_DIR/lib/utils/typeExists
 # Install npm if not already installed.
 #
 if typeExists "npm"; then
-	p_success "npm is installed. Continuing..."
+	p_success "npm is already installed. Continuing..."
 else
 	p_info "Installing npm..."
 	curl https://www.npmjs.org/install.sh | sh

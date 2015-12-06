@@ -14,7 +14,7 @@ source $DOT_DIR/lib/utils/typography
 # Depending on the used OS, install homebrew.
 if [ "$OS" == "OSX" ]; then
 	if typeExists "brew"; then
-		p_success "Homebrew is installed. Continuing..."
+		p_success "Homebrew is already installed. Continuing..."
 	else
 		p_info "Installing homebrew..."
 		ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

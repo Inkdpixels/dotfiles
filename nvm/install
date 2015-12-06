@@ -10,7 +10,7 @@ DOT_DIR="$HOME/.dotfiles"
 source $DOT_DIR/lib/utils/typography
 
 if [ -d "$HOME/.nvm" ]; then
-	p_success "nvm already installed. Continuing..."
+	p_success "nvm is already installed. Continuing..."
 else
 	p_info "Installing nvm..."
 	curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.29.0/install.sh | bash

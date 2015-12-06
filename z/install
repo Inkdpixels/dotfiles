@@ -11,7 +11,9 @@ SOURCE_STRING=". $DOT_DIR/z/source"
 source $DOT_DIR/lib/constants/profile
 source $DOT_DIR/lib/utils/typography
 
-if [ ! -d "$DOT_DIR/z/src" ]; then
+if [ -d "$DOT_DIR/z/src" ]; then
+	p_success "z is already installed. Continuing..."
+else
 	p_info "Installing the 'z' command..."
 	git clone https://github.com/rupa/z.git $DOT_DIR/z/src
 
@@ -23,6 +25,4 @@ if [ ! -d "$DOT_DIR/z/src" ]; then
 	echo "$SOURCE_STRING" >> $DETECTED_PROFILE
 
 	p_success "From now on the 'z' binary should be sourced on each new bash session."
-else
-	p_success "z is already installed. Continuing..."
 fi

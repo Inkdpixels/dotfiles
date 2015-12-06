@@ -14,7 +14,7 @@ source $DOT_DIR/lib/utils/typeExists
 # Install storm if not already installed.
 #
 if typeExists "storm"; then
-	p_success "storm is installed. Continuing..."
+	p_success "storm is already installed. Continuing..."
 else
 	p_info "Installing storm..."
 	if typeExists "brew"; then
