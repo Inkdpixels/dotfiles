@@ -29,8 +29,8 @@ ${bold}'g branches' -> Outputs a list of all local and remote branches.${normal}
 ${bold}'g remotes' -> Outputs a list of all added remotes.${normal}			Usage: 'g remotes'
 
 ${underline}Misc. helpers${nounderline}
-${bold}'g hash' -> Copies the current checked out hash to the clipboard.${normal}	Usage: 'g hash'
 ${bold}'g cleanhistory' -> Cleans up the local git history.${normal}			Usage: 'g cleanhistory'
 ${bold}'g undo' -> Reverts the last commit but preserves the changes made.${normal}	Usage: 'g undo'
+${bold}'git-hash' -> Copies the current checked out hash to the clipboard.${normal}	Usage: 'git-hash'
 
 Need help or got an issue? Head over to ${underline}https://github.com/Inkdpixels/dotfiles/issues${nounderline}."

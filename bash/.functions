@@ -52,6 +52,13 @@ function git-nuke() {
 }
 
 #
+# Copies the current checked out commit hash to the users clipboard.
+#
+function git-hash() {
+	git rev-parse HEAD | pbcopy
+}
+
+#
 # Conditionally start the mysql service.
 #
 function start-mysql {

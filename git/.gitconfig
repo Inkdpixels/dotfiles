@@ -21,7 +21,6 @@
   remotes = remote -v
 
 	# Helpers
-	hash = rev-parse HEAD && git rev-parse HEAD | pbcopy
 	cleanhistory = fsck —unreachable && git gc && git prune && git gc —prune=now
 	undo = reset --soft HEAD^
 [color]
