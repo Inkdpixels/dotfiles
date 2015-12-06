@@ -19,6 +19,7 @@ Currently this .dotfiles repository is aimed at Linux and OSX systems, you also 
 * caniuse-cmd
 * semantic-release-cli
 * [eg](https://github.com/srsudar/eg)
+* [stormSSH](https://github.com/emre/storm)
 
 ## CLI
 This .dotfiles repository comes bundled with an CLI, below is a list of commands you can execute.

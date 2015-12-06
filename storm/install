@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+#
+# Installs the storm ssh-manager binary.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+source $DOT_DIR/lib/utils/typography
+source $DOT_DIR/lib/utils/typeExists
+
+#
+# Install storm if not already installed.
+#
+if typeExists "storm"; then
+	p_success "storm is installed. Continuing..."
+else
+	p_info "Installing storm..."
+	if typeExists "brew"; then
+		brew install stormssh
+	else
+		p_warn "StormSSH can currently only be installed via pip/homebrew.
+
+Since homebrew isn't installed on your system, you need to manually install StormSSH.
+See 'https://github.com/emre/storm#installation'"
+	fi
+fi
