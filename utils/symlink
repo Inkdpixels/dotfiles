@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+#
+# A helper function which safely simylinks a file.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+# Arguments:
+# $1 The target file.
+# $2 The location of the symlink to create.
+#
+# Usage:
+# symlink "git/.gitconfig" "$HOME/.gitconfig"
+#
+DOT_DIR="$HOME/.dotfiles"
+
+source $DOT_DIR/utils/typography
+source $DOT_DIR/utils/fileExists
+source $DOT_DIR/utils/isFileSymlink
+
+symlink() {
+	if fileExists "$2"; then
+		if isFileSymlink "$2"; then
+				p_success "File '$2' is a symbolic link. Continuing..."
+			else
+				p_warn "File '$2' is not a symbolic link, you may want to remove this file and re-run this script."
+		fi
+	else
+		ln -s "$1" "$2"
+
+		if isFileSymlink "$2"; then
+			p_success "Successfully linked '$2' to '$1'."
+		else
+			p_fail "Seems like the link operation failed. Please report this as an issue at 'https://github.com/Inkdpixels/dotfiles/issues'."
+		fi
+	fi
+}

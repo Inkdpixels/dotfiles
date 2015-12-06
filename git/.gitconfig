@@ -1,0 +1,57 @@
+[user]
+	name = Tyll Weiß
+	email = inkdpixels@googlemail.com
+[credential]
+	helper = osxkeychain
+[alias]
+	# Remote
+	p = push
+	up = pull
+
+	# Local
+	c = commit -m
+	d = diff
+	co = checkout
+	b = branch
+	lg = log --pretty=oneline
+	s = status -sb
+
+	# Beautified lists.
+	branches = branch -a
+  remotes = remote -v
+
+	# Helpers
+	hash = rev-parse HEAD && git rev-parse HEAD | pbcopy
+	cleanhistory = fsck —unreachable && git gc && git prune && git gc —prune=now
+	undo = reset --soft HEAD^
+[color]
+	ui = always
+[core]
+	excludesfile = ~/.gitignore
+[color "branch"]
+	current = yellow reverse
+	local = yellow
+	remote = green
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+[color "status"]
+	added = yellow
+	changed = green
+	untracked = cyan
+[merge]
+	log = true
+[url "git@github.com:"]
+	insteadOf = "gh:"
+	pushInsteadOf = "github:"
+	pushInsteadOf = "git://github.com/"
+[url "git://github.com/"]
+	insteadOf = "github:"
+[url "git@gist.github.com:"]
+	insteadOf = "gst:"
+	pushInsteadOf = "gist:"
+	pushInsteadOf = "git://gist.github.com/"
+[url "git://gist.github.com/"]
+	insteadOf = "gist:"

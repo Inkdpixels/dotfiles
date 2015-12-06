@@ -1,0 +1,36 @@
+# Desktop & Finder related ignores.
+.DS_Store
+Desktop.ini
+.Spotlight-V100
+.Trashes
+
+# Thumbnail cache files
+._*
+Thumbs.db
+
+# IDE's & Text-Editors.
+.sublime-project
+.sublime-workspace
+.idea
+
+# Caches & Tooling folders.
+.svn
+.CVS
+.sass-cache
+
+# Compiled Python files
+*.pyc
+
+# zed
+.zedstate
+
+# Numerous always-ignore extensions.
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~

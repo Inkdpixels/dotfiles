@@ -8,8 +8,25 @@
 DOT_DIR="$HOME/.dotfiles"
 
 source $DOT_DIR/utils/install
+source $DOT_DIR/utils/symlink
+source $DOT_DIR/constants/os
+source $DOT_DIR/utils/typography
 
 #
 # Install the binary if not already installed.
 #
 install "git"
+
+#
+# Symlink/create the global configuration.
+#
+p_info "Symlinking the global .gitconfig..."
+symlink "$DOT_DIR/git/.gitconfig" "$HOME/.gitconfig"
+
+if [ "$OS" == "OSX" ]; then
+	p_warn "On OSX we also recommend setting 'git config --global credential.helper osxkeychain'."
+	echo ""
+fi
+
+p_info "Symlinking the global .gitignore..."
+symlink "$DOT_DIR/git/.gitignore" "$HOME/.gitignore"
