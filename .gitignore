@@ -4,6 +4,6 @@ test_working_dir/
 tests/output/*.result.txt
 
 # External sources which shouldn't be committed.
-z/
-s/
+z/src/
+s/src/
 eg/src/

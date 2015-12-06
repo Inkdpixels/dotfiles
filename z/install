@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+#
+# Downloads the 'z' sources and symlinks the binary to the path.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+SOURCE_STRING=". $DOT_DIR/z/source"
+
+source $DOT_DIR/lib/constants/profile
+source $DOT_DIR/lib/utils/typography
+source $DOT_DIR/lib/utils/fileExists
+
+#
+# Symlink/create the global configuration.
+#
+if [ ! -d "$DOT_DIR/z/src" ]; then
+	p_info "Installing the 'z' command..."
+	git clone https://github.com/rupa/z.git $DOT_DIR/z/src
+
+	# Append the "source" file to the $DETECTED_PROFILE.
+	p_info "Appending the source file of 'z' to your detected profile..."
+
+	echo "" >> $DETECTED_PROFILE
+	echo "# Source 'z' from the .dotfiles repository." >> $DETECTED_PROFILE
+	echo "$SOURCE_STRING" >> $DETECTED_PROFILE
+
+	p_success "From now on the 'z' binary should be sourced on each new bash session."
+else
+	p_success "z is already installed. Continuing..."
+fi

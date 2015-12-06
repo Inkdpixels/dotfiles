@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+#
+# Source the 'z' script.
+#
+# Author: Tyll Weiß <inkdpixels@gmail.com>
+#
+DOT_DIR="$HOME/.dotfiles"
+
+. $DOT_DIR/z/z.sh
