@@ -19,3 +19,5 @@
   emmet: {}
   "autoclose-html": {}
   pigments: {}
+  "atom-beautify": {}
+  "file-icons": {}
