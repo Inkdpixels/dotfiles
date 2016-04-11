@@ -55,5 +55,9 @@ function git-nuke() {
 # Copies the current checked out commit hash to the users clipboard.
 #
 function git-hash() {
-	git rev-parse HEAD | pbcopy
+	if [ "$OS" == "OSX" ]; then
+		git rev-parse HEAD | pbcopy
+	else
+		git rev-parse HEAD | xclip -sel clip
+	fi
 }
