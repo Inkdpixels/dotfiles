@@ -57,21 +57,3 @@ function git-nuke() {
 function git-hash() {
 	git rev-parse HEAD | pbcopy
 }
-
-#
-# Conditionally start the mysql service.
-#
-function start-mysql {
-  local UP=$(pgrep mysql | wc -l);
-  if [ "$UP" -ne 1 ]; then
-    mysql.server start
-  fi
-}
-
-#
-# Add the local ssh key to the ssh agent.
-#
-function add-ssh {
-  eval `ssh-agent -s`
-  ssh-add
-}

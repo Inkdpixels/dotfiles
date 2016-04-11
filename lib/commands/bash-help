@@ -26,7 +26,5 @@ ${bold}'cdf' -> cd's into the frontmost Finder window(OSX only).${normal}				Usa
 ${bold}'mkd' -> Creates and cd's into the given directory name.${normal}				Usage: 'mkd myDirectory'
 ${bold}'whoisusingport' -> Outputs a list of processes which are using the given port.${normal}		Usage: 'whoisusingport 8001'
 ${bold}'gz' -> Outputs the normal and gzipped size of the given file.${normal}				Usage: 'gz path/to/my/file'
-${bold}'start-mysql' -> Conditionally starts the mysql.server service.${normal}				Usage: 'start-mysql'
-${bold}'add-ssh' -> Add the local ssh key to the ssh agent..${normal}					Usage: 'add-ssh'
 
 Need help or got an issue? Head over to ${underline}https://github.com/Inkdpixels/dotfiles/issues${nounderline}."
