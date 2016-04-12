@@ -1,8 +1,6 @@
 [user]
 	name = Tyll Weiß
-	email = inkdpixels@googlemail.com
-[credential]
-	helper = osxkeychain
+	email = info@craft-interactive.de
 [alias]
 	# Remote
 	p = push
@@ -18,7 +16,7 @@
 
 	# Beautified lists.
 	branches = branch -a
-  remotes = remote -v
+	remotes = remote -v
 
 	# Helpers
 	cleanhistory = fsck —unreachable && git gc && git prune && git gc —prune=now

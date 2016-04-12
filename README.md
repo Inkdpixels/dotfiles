@@ -8,11 +8,10 @@ git clone https://github.com/Inkdpixels/dotfiles.git $HOME/.dotfiles && cd $HOME
 ```
 
 ## Requirements
-Currently this .dotfiles repository is aimed at Linux and OSX systems, you also need a package manager like `apt-get` or `homebrew` to install all dependencies.
+Currently this .dotfiles repository is aimed at Linux systems, you also need a package manager like `apt-get` to install all dependencies.
 
 ## What will be installed?
 * Git (Including the global configuration files)
-* Homebrew (OSX only)
 * Common bash functions, aliases and exports
 * nvm
 * npm
@@ -20,11 +19,7 @@ Currently this .dotfiles repository is aimed at Linux and OSX systems, you also 
 * semantic-release-cli
 * composer
 * OpenSSH
-* [eg](https://github.com/srsudar/eg)
 * [z](https://github.com/rupa/z)
-* [s](https://github.com/haosdent/s)
-* [stormSSH](https://github.com/emre/storm)
-* [prm](https://github.com/eivind88/prm)
 
 ## CLI
 This .dotfiles repository comes bundled with an CLI, below is a list of commands you can execute.

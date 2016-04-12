@@ -7,17 +7,6 @@
 #
 DOT_DIR="$HOME/.dotfiles"
 
-source $DOT_DIR/lib/constants/os
-
-#
-# If we're on OSX, the `cdf` function can be used to quickly jump to the frontmost Finder window.
-#
-if [ "$OS" == "OSX" ]; then
-	function cdf() {
-		cd "`osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)'`"
-	}
-fi
-
 #
 # Create a new directory and enter it.
 #
@@ -55,9 +44,5 @@ function git-nuke() {
 # Copies the current checked out commit hash to the users clipboard.
 #
 function git-hash() {
-	if [ "$OS" == "OSX" ]; then
-		git rev-parse HEAD | pbcopy
-	else
-		git rev-parse HEAD | xclip -sel clip
-	fi
+	git rev-parse HEAD | xclip -sel clip
 }
